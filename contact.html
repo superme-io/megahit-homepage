@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact — Megahit GrowthOS</title>
+<meta name="description" content="Get in touch with the Megahit team — sales, support, partnerships, or press.">
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FRR3PME1TR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FRR3PME1TR');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span data-logo="full" data-h="32"></span></a>
+    <div class="nav-links">
+      <a href="#how">How It Works</a>
+      <a href="#modules">Modules</a>
+      <a href="#advantages">Why Megahit</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/about">Our Story</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-ghost btn-sm" href="/demo">Book a Demo</a>
+      <button class="btn btn-primary btn-sm" data-gate="A">Claim 1000 Free Credits →</button>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+<header class="page-hero">
+  <canvas id="stars"></canvas>
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="eyebrow"><span class="pulse-dot"></span>Contact</span>
+    <h1>Talk to us.</h1>
+    <p class="subhead">Sales, support, partnerships, or press — tell us what you need and we'll route it to the right person.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:20px">
+  <div class="wrap">
+    <div class="grid-3" style="max-width:920px;margin:0 auto 40px">
+      <a class="card reveal" href="/demo"><div class="symbol-tile"><svg data-sym="orbits"></svg></div><h3>Sales / see a demo</h3><p>Book 30 minutes on the calendar — we'll come prepared.</p><p style="color:#5ce1e6;font-size:12.5px;margin-top:10px">Go to booking →</p></a>
+      <a class="card reveal d1" href="mailto:business@megahit.ai"><div class="symbol-tile"><svg data-sym="waves"></svg></div><h3>Support</h3><p>Something not working, or a question about your account.</p><p style="color:#5ce1e6;font-size:12.5px;margin-top:10px">business@megahit.ai</p></a>
+      <a class="card reveal d2" href="mailto:business@megahit.ai"><div class="symbol-tile"><svg data-sym="arcs"></svg></div><h3>Partnerships &amp; Press</h3><p>Integrations, media, and everything in between.</p><p style="color:#5ce1e6;font-size:12.5px;margin-top:10px">business@megahit.ai</p></a>
+    </div>
+    <div class="card reveal" style="max-width:560px;margin:0 auto;padding:32px">
+      <h3 style="margin-bottom:4px">Send a message</h3>
+      <p style="font-size:12px;color:rgba(226,232,250,.45)">We respond within 1 business day.</p>
+      <form id="contact-form" style="margin-top:18px;display:flex;flex-direction:column;gap:12px" class="modal-form">
+        <div><label style="font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,232,250,.38)">Name</label>
+          <input name="name" required style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:12px 14px;color:#fff;font-size:13.5px"></div>
+        <div><label style="font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,232,250,.38)">Work email</label>
+          <input name="email" type="email" required style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:12px 14px;color:#fff;font-size:13.5px"></div>
+        <div><label style="font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,232,250,.38)">Company (optional)</label>
+          <input name="company" style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:12px 14px;color:#fff;font-size:13.5px"></div>
+        <div><label style="font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,232,250,.38)">Reason for contact</label>
+          <select name="reason" required style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:12px 14px;color:#fff;font-size:13.5px">
+            <option value="" disabled selected>Select a reason</option>
+            <option>Sales</option><option>Support</option><option>Partnerships</option><option>Press</option><option>Other</option>
+          </select></div>
+        <div><label style="font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,232,250,.38)">Message</label>
+          <textarea name="message" rows="4" required style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px;padding:12px 14px;color:#fff;font-size:13.5px;font-family:'Inter',sans-serif;resize:vertical"></textarea></div>
+        <button class="btn btn-primary" type="submit" style="justify-content:center">Send Message →</button>
+      </form>
+      <p id="contact-ok" style="display:none;text-align:center;color:#07edd8;padding:20px 0 6px">✓ Message sent — we'll get back to you within 1 business day.</p>
+    </div>
+  </div>
+</section>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(this));
+  location.href = 'mailto:business@megahit.ai?subject=' + encodeURIComponent('[' + d.reason + '] Contact from ' + d.name + (d.company ? ' (' + d.company + ')' : '')) +
+    '&body=' + encodeURIComponent(d.message + '\n\n— ' + d.name + ' · ' + d.email);
+  this.style.display = 'none';
+  document.getElementById('contact-ok').style.display = 'block';
+});
+</script>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span data-logo="full" data-h="38"></span>
+        <p style="margin-top:14px;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(226,232,250,.4)">Your Growth Co-Founder</p>
+        <p>The first agent that proactively executes and syncs its learnings with humans — 20+ growth experts behind every campaign.</p>
+        <p>By Super Intelligence · <a href="mailto:business@megahit.ai" style="display:inline;color:#5ce1e6">business@megahit.ai</a></p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="/#how">How It Works</a>
+        <a href="/#modules">9 Modules</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/demo">Book a Demo</a>
+        <a href="#" data-gate="B">Download Growth Playbook</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/about">Our Story</a>
+        <a href="/contact">Contact</a>
+        <a href="/contact">Careers</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Super Intelligence · Megahit GrowthOS</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body></html>

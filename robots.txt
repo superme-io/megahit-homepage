@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Unlinked internal mockup — not a real page
+Disallow: /assets/dashboard.html
+
+Sitemap: https://megahit.ai/sitemap.xml
