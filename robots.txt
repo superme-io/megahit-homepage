@@ -4,4 +4,9 @@ Allow: /
 # Unlinked internal mockup — not a real page
 Disallow: /assets/dashboard.html
 
+# Waitlist lead magnet: delivered by email after signup, so indexing it would
+# give away the asset the gate trades for an address.
+Disallow: /playbook
+Disallow: /assets/Growth-Playbook-101.pdf
+
 Sitemap: https://megahit.ai/sitemap.xml

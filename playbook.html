@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SuperMem GrowthOS — Growth Strategy Masterclass · MegaHit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Lead magnet: reached through the waitlist email, not through search. Indexing
+     it would hand out the asset the gate exists to trade for an address. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canvas:#FFFFFF; --canvas-soft:#F7F8FB;
+    --ink:#0B0C10; --ink-2:#3C3F46; --muted:#7A7F8A;
+    --line:#E6E8EE; --card:#F5F6FA;
+    --blue:#264EF7; --blue-soft:rgba(38,78,247,.07);
+    --cyan:#5CE1E6; --teal:#07EDD8; --negative:#FF5C7A;
+    --head:'Space Grotesk',sans-serif; --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--body);color:var(--ink);background:var(--canvas-soft);font-size:15px;line-height:1.62;}
+  .doc{max-width:960px;margin:0 auto;background:var(--canvas);}
+
+  header.brand{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:16px 48px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.86);backdrop-filter:blur(8px);}
+  .logo{display:flex;align-items:center;gap:9px;}
+  .wordmark{font-family:var(--head);font-weight:500;font-size:15px;letter-spacing:.05em;color:var(--ink);}
+  .wordmark b{color:var(--blue);font-weight:500;}
+  .tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;}
+
+  footer.brand{padding:52px 48px 44px;background:var(--ink);text-align:center;}
+  footer.brand .logo{justify-content:center;margin:0 0 22px;}
+  footer.brand h2{font-family:var(--head);color:#fff;font-weight:600;font-size:24px;letter-spacing:-.01em;margin:0 0 18px;}
+  footer.brand .l1{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:22px;}
+  footer.brand .cta-btn{margin-bottom:18px;}
+  footer.brand .l2{font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;color:var(--cyan);}
+  footer.brand .l2::after{content:" →";}
+
+  .cover{padding:56px 48px 36px;}
+  .eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;color:var(--blue);text-transform:uppercase;background:var(--blue-soft);display:inline-block;padding:5px 10px;border-radius:6px;}
+  h1{font-family:var(--head);font-weight:600;font-size:36px;letter-spacing:-.015em;line-height:1.12;margin:16px 0 12px;}
+  .sub{color:var(--ink-2);font-size:15px;max-width:680px;}
+  .meta-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);}
+  .meta-row div{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;}
+  .meta-row div b{display:block;font-family:var(--body);font-weight:600;color:var(--ink);font-size:13.5px;text-transform:none;letter-spacing:0;margin-top:4px;}
+
+  .roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:22px;}
+  .roadmap .item{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--card);text-decoration:none;display:block;}
+  .roadmap .letter{font-family:var(--head);font-weight:700;font-size:19px;color:var(--blue);}
+  .roadmap .title{font-weight:600;font-size:13.5px;margin-top:5px;color:var(--ink);}
+  .roadmap .desc{color:var(--muted);font-size:11.8px;margin-top:5px;line-height:1.5;}
+
+  .part-head{padding:46px 48px 6px;}
+  .part-tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;color:#fff;background:var(--blue);padding:4px 11px;border-radius:5px;text-transform:uppercase;}
+  .part-tag.small{padding:3px 9px;font-size:9.5px;margin-left:8px;vertical-align:middle;}
+  .part-head h2{font-family:var(--head);font-weight:600;font-size:25px;margin:14px 0 8px;letter-spacing:-.01em;}
+  .part-head p.desc{color:var(--ink-2);font-size:14px;max-width:700px;}
+
+  .subsec{padding:22px 48px 8px;}
+  .subsec h3{font-family:var(--head);font-weight:600;font-size:16px;margin:26px 0 10px;display:flex;gap:10px;align-items:baseline;}
+  .subsec h3:first-child{margin-top:0;}
+  .subsec h3 .num{font-family:var(--mono);font-size:10.5px;color:var(--blue);background:var(--blue-soft);padding:2px 8px;border-radius:5px;letter-spacing:.03em;}
+  .subsec .sub-desc{color:var(--muted);font-size:12.3px;margin:-4px 0 12px;}
+  .subsec h4{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:20px 0 8px;}
+  .subsec p{font-size:13.6px;color:var(--ink-2);margin:0 0 10px;line-height:1.68;}
+  .subsec ul:not(.arrow-list){padding-left:19px;margin:0 0 12px;}
+  .subsec ul:not(.arrow-list) li{font-size:13.4px;color:var(--ink-2);margin:5px 0;line-height:1.6;}
+  .subsec ol{padding-left:19px;margin:0 0 12px;}
+  .subsec ol li{font-size:13.4px;color:var(--ink-2);margin:6px 0;line-height:1.65;}
+  .divider{padding:0 48px;}
+  .divider hr{border:none;border-top:1px solid var(--line);}
+
+  ul.arrow-list{list-style:none;margin:6px 0 18px;padding:0;}
+  ul.arrow-list li{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-2);}
+  ul.arrow-list li:last-child{border-bottom:none;}
+  ul.arrow-list .arrow{color:var(--blue);font-weight:700;flex-shrink:0;}
+  ul.arrow-list strong{color:var(--ink);font-weight:600;}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 18px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px;}
+  .card .label{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;color:var(--muted);text-transform:uppercase;}
+  .card .num{font-family:var(--head);font-weight:600;font-size:23px;margin:7px 0 2px;letter-spacing:-.01em;}
+  .card .note{font-size:11.5px;color:var(--muted);}
+
+  .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:10px 0 18px;}
+  table{width:100%;border-collapse:collapse;font-size:12.6px;min-width:520px;}
+  thead th{background:var(--card);font-family:var(--mono);font-size:9.3px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap;}
+  tbody td{padding:11px 14px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top;}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody td:first-child{color:var(--ink);font-weight:600;}
+  tbody tr.hilite td{background:var(--blue-soft);}
+
+  .callout{background:var(--blue-soft);border:1px solid rgba(38,78,247,.22);border-radius:12px;padding:16px 20px;font-size:13.5px;color:var(--ink-2);margin:12px 0 18px;}
+  .callout strong{color:var(--ink);}
+  .callout .arrow{color:var(--blue);font-weight:700;}
+  .callout .clabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;display:block;}
+  .callout.soft{background:var(--card);border-color:var(--line);}
+  .callout.soft .clabel{color:var(--muted);}
+
+  .chart-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px 16px;margin:10px 0 20px;}
+  .chart-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;color:var(--muted);text-transform:uppercase;margin-bottom:12px;}
+  .chart-card svg{display:block;width:100%;height:auto;}
+  .chart-cap{font-size:11.5px;color:var(--muted);text-align:center;margin:10px 0 0;font-style:italic;}
+
+  .compare-chart{border:1px solid var(--line);border-radius:14px;padding:20px 22px;background:var(--card);margin:10px 0 18px;}
+  .cc-cap{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:14px;}
+  .cc-row{display:grid;grid-template-columns:160px 1fr 90px;align-items:center;gap:14px;margin-bottom:12px;}
+  .cc-row:last-child{margin-bottom:0;}
+  .cc-label{font-size:12.5px;font-weight:600;color:var(--ink);}
+  .cc-bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;}
+  .cc-fill{height:100%;border-radius:6px;}
+  .cc-val{font-size:11.3px;color:var(--muted);text-align:right;}
+
+  .heatmap{border:1px solid var(--line);border-radius:14px;padding:20px 22px 18px;background:var(--card);margin:10px 0 18px;overflow-x:auto;}
+  .heatmap .hm-grid{display:grid;grid-template-columns:150px repeat(6,1fr);gap:5px;min-width:600px;}
+  .heatmap .hm-head{font-family:var(--mono);font-size:9px;color:var(--muted);text-align:center;text-transform:uppercase;letter-spacing:.05em;padding-bottom:6px;}
+  .heatmap .hm-label{font-size:11.5px;color:var(--ink-2);font-weight:600;display:flex;align-items:center;}
+  .heatmap .cell{height:24px;border-radius:5px;background:var(--blue);}
+  .hm-legend{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;}
+  .hm-legend span{font-size:10.8px;color:var(--muted);display:inline-flex;align-items:center;gap:5px;}
+  .hm-legend i{width:16px;height:9px;border-radius:3px;background:var(--blue);display:inline-block;}
+
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-family:var(--body);font-weight:600;font-size:14px;padding:12px 22px;border-radius:100px;text-decoration:none;}
+
+  /* end-of-session CTA */
+  .session-cta{padding:8px 48px 36px;text-align:center;}
+  @media (max-width:640px){.session-cta{padding-left:22px;padding-right:22px;}}
+
+  /* pullquote */
+  .pq{border-left:3px solid var(--blue);background:var(--blue-soft);padding:14px 18px;margin:14px 0;font-style:italic;color:var(--ink-2);border-radius:0 10px 10px 0;font-size:14.5px;line-height:1.6;}
+  .pq .ps{display:block;margin-top:8px;font-style:normal;font-family:var(--mono);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;}
+
+  /* case study card */
+  .case-card{border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0;background:#fff;}
+  .case-card .cs-badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--blue-soft);display:inline-block;padding:3px 10px;border-radius:20px;margin-bottom:9px;}
+  .case-card .cs-title{font-family:var(--head);font-weight:600;font-size:15.5px;margin-bottom:8px;}
+  .case-card p{color:var(--ink-2);font-size:13.4px;margin:0 0 8px;line-height:1.68;}
+  .case-card .cs-lesson{font-size:13px;color:var(--ink);margin-top:8px;padding-top:10px;border-top:1px dashed var(--line);}
+  .case-card .cs-lesson b{color:var(--blue);}
+
+  /* week grid / loop card */
+  .week-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 18px;}
+  @media(max-width:640px){.week-grid{grid-template-columns:1fr}}
+  .week-box{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--card);}
+  .week-box .wnum{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;display:block;}
+  .week-box{font-size:12.7px;color:var(--ink-2);line-height:1.62;}
+
+  .loop-card{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:var(--card);margin:12px 0 18px;}
+  .loop-card .lclabel{font-family:var(--mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:10px;}
+  .loop-card ol,.loop-card ul{padding-left:19px;}
+  .loop-card li{font-size:13.3px;color:var(--ink-2);margin:6px 0;line-height:1.62;}
+  .loop-card p{font-size:13.3px;color:var(--ink-2);margin:0 0 8px;}
+
+  /* pro tips */
+  .pro-tips{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 18px;}
+  @media(max-width:640px){.pro-tips{grid-template-columns:1fr}}
+  .pro-tip{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff;display:flex;gap:12px;}
+  .pro-tip .pt-num{font-family:var(--head);font-weight:700;font-size:20px;color:var(--blue);line-height:1;flex-shrink:0;}
+  .pro-tip div p,.pro-tip div{font-size:12.7px;color:var(--ink-2);line-height:1.58;}
+  .pro-tip strong{color:var(--ink);}
+
+  /* master vs mediocre */
+  .mvc-wrap{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:12px 0 18px;overflow-x:auto;}
+  .mvc-table{width:100%;border-collapse:collapse;font-size:12.6px;min-width:640px;}
+  .mvc-table th{padding:10px 14px;font-family:var(--mono);font-size:9.3px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-align:left;border-bottom:1px solid var(--line);}
+  .mvc-table th.mvc-area{background:var(--canvas);color:var(--muted);}
+  .mvc-table th.mvc-mediocre{background:var(--canvas-soft);color:var(--muted);}
+  .mvc-table th.mvc-master{background:var(--blue-soft);color:var(--blue);}
+  .mvc-table td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.55;}
+  .mvc-table tr:last-child td{border-bottom:none;}
+  .mvc-table td.mvc-area{font-weight:600;color:var(--ink);font-size:12.2px;}
+  .mvc-table td.mvc-mediocre{color:var(--muted);background:rgba(122,127,138,.045);}
+  .mvc-table td.mvc-master{color:var(--ink);background:var(--blue-soft);}
+
+  /* session tag */
+  .session-tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);background:var(--blue-soft);padding:3px 10px;border-radius:20px;vertical-align:middle;margin-left:8px;}
+
+  /* vis wrap for svg charts */
+  .vis-wrap{border:1px solid var(--line);border-radius:14px;padding:22px 24px 14px;margin:16px 0 22px;background:var(--card);}
+  .vis-title{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+  .vis-wrap svg{display:block;width:100%;height:auto;}
+  .vis-cap{font-size:11.5px;color:var(--muted);text-align:center;margin:12px 0 0;font-style:italic;}
+
+  /* Header right-hand group: the tagline plus the PDF download. */
+  .brand-actions{display:flex;align-items:center;gap:14px;}
+  .dl-pdf{display:inline-flex;align-items:center;gap:7px;font-family:var(--body);font-size:12.5px;
+    font-weight:600;text-decoration:none;color:#fff;background:var(--blue);
+    padding:8px 14px;border-radius:8px;white-space:nowrap;transition:filter .15s ease;}
+  .dl-pdf:hover{filter:brightness(1.08);}
+
+  @media print{
+    body{background:#fff;}
+    header.brand{position:static;}
+    .part-head{page-break-before:always;}
+    /* The PDF is generated from this page — the button must not print itself. */
+    .dl-pdf{display:none;}
+  }
+  @media (max-width:640px){
+    .grid{grid-template-columns:repeat(2,1fr);}
+    header.brand,.cover,.part-head,.subsec,footer.brand{padding-left:22px;padding-right:22px;}
+    .week-grid,.pro-tips{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <header class="brand">
+    <div class="logo">
+      <img src="data:image/webp;base64,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" alt="Megahit" height="30" style="display:block;">
+    </div>
+    <div class="brand-actions">
+      <span class="tag">Your Growth Co-Founder</span>
+      <a class="dl-pdf" href="/assets/Growth-Playbook-101.pdf" download="Growth-Playbook-101.pdf">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Download PDF
+      </a>
+    </div>
+  </header>
+
+  <div class="cover">
+    <span class="eyebrow">Growth Report · Team Training Course · 6 Sessions · 6 Client Types · 100+ Tools</span>
+    <h1>Growth Strategy Masterclass</h1>
+    <p class="sub">Multi-Client Playbook for Tech SaaS, B2B, B2C, E-commerce, Professional Services &amp; Gaming</p>
+    <div class="meta-row">
+      <div>Prepared for<b>SuperMem Growth Team</b></div>
+      <div>Prepared by<b>SuperMem GrowthOS</b></div>
+      <div>Status<b>Internal Training Course</b></div>
+    </div>
+  </div>
+
+  <div class="subsec" style="padding-top:6px">
+    <div class="grid">
+      <div class="card"><div class="label">Sessions</div><div class="num">6</div><div class="note">~10 hours total</div></div>
+      <div class="card"><div class="label">Growth Domains</div><div class="num">21</div><div class="note">Every dimension covered</div></div>
+      <div class="card"><div class="label">Client Types</div><div class="num">6</div><div class="note">Tailored playbooks</div></div>
+      <div class="card"><div class="label">SaaS + AI Tools</div><div class="num">100+</div><div class="note">Mapped to each domain</div></div>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(1,1fr);max-width:240px;">
+      <div class="card"><div class="label">Case Studies</div><div class="num">30+</div><div class="note">Real company examples</div></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-label">The Five-Stage Growth Architecture</div>
+      <svg viewBox="0 0 880 120" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <rect x="6" y="18" width="152" height="84" rx="12" fill="#F5F6FA" stroke="#E6E8EE" stroke-width="1"/>
+          <text x="82" y="42" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="500" letter-spacing=".8" fill="#7A7F8A">STAGE 0</text>
+          <text x="82" y="60" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="600" fill="#0B0C10">Find the Truth</text>
+          <text x="82" y="76" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">PMF · ICP · WTP</text>
+          <text x="82" y="92" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">Metrics baseline</text>
+        </g>
+        <line x1="162" y1="60" x2="178" y2="60" stroke="#264EF7" stroke-width="2"/>
+        <polygon points="178,55 188,60 178,65" fill="#264EF7"/>
+        <g>
+          <rect x="190" y="18" width="152" height="84" rx="12" fill="#F5F6FA" stroke="#E6E8EE" stroke-width="1"/>
+          <text x="266" y="42" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="500" fill="#7A7F8A">STAGE 1</text>
+          <text x="266" y="60" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="600" fill="#0B0C10">Tell the Story</text>
+          <text x="266" y="76" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">Brand · PR · SEO</text>
+          <text x="266" y="92" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">KOL · Founder brand</text>
+        </g>
+        <line x1="346" y1="60" x2="362" y2="60" stroke="#264EF7" stroke-width="2"/>
+        <polygon points="362,55 372,60 362,65" fill="#264EF7"/>
+        <g>
+          <rect x="374" y="18" width="152" height="84" rx="12" fill="#F5F6FA" stroke="#E6E8EE" stroke-width="1"/>
+          <text x="450" y="42" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="500" fill="#7A7F8A">STAGE 2</text>
+          <text x="450" y="60" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="600" fill="#0B0C10">Light the Fire</text>
+          <text x="450" y="76" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">Launch · PLG/SLG</text>
+          <text x="450" y="92" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">Mobile UA · ASO</text>
+        </g>
+        <line x1="530" y1="60" x2="546" y2="60" stroke="#264EF7" stroke-width="2"/>
+        <polygon points="546,55 556,60 546,65" fill="#264EF7"/>
+        <g>
+          <rect x="558" y="18" width="152" height="84" rx="12" fill="#F5F6FA" stroke="#E6E8EE" stroke-width="1"/>
+          <text x="634" y="42" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="500" fill="#7A7F8A">STAGE 3</text>
+          <text x="634" y="60" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="600" fill="#0B0C10">Build the Engine</text>
+          <text x="634" y="76" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">Retention · Community</text>
+          <text x="634" y="92" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">Social search · ASO</text>
+        </g>
+        <line x1="714" y1="60" x2="730" y2="60" stroke="#264EF7" stroke-width="2"/>
+        <polygon points="730,55 740,60 730,65" fill="#264EF7"/>
+        <g>
+          <rect x="742" y="18" width="132" height="84" rx="12" fill="#F5F6FA" stroke="#264EF7" stroke-width="1"/>
+          <text x="808" y="42" text-anchor="middle" font-family="JetBrains Mono" font-size="9" font-weight="500" fill="#7A7F8A">STAGE 4</text>
+          <text x="808" y="60" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="600" fill="#0B0C10">Compound Moat</text>
+          <text x="808" y="76" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">Referrals · Partnerships</text>
+          <text x="808" y="92" text-anchor="middle" font-family="Inter" font-size="10" fill="#7A7F8A">SEO depth · Fundraise</text>
+        </g>
+      </svg>
+      <div class="chart-cap">Fix retention (Stage 3) before scaling paid acquisition. Never fill a leaky bucket.</div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-label">Minimum Funnel Conversion Benchmarks Before Scaling Paid</div>
+      <svg viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg">
+        <text x="12" y="38" font-family="Inter" font-size="9" fill="#7A7F8A">40%</text>
+        <text x="12" y="78" font-family="Inter" font-size="9" fill="#7A7F8A">30%</text>
+        <text x="12" y="118" font-family="Inter" font-size="9" fill="#7A7F8A">20%</text>
+        <text x="12" y="158" font-family="Inter" font-size="9" fill="#7A7F8A">10%</text>
+        <line x1="50" y1="35" x2="850" y2="35" stroke="#E6E8EE" stroke-width="1"/>
+        <line x1="50" y1="75" x2="850" y2="75" stroke="#E6E8EE" stroke-width="1"/>
+        <line x1="50" y1="115" x2="850" y2="115" stroke="#E6E8EE" stroke-width="1"/>
+        <line x1="50" y1="155" x2="850" y2="155" stroke="#E6E8EE" stroke-width="1"/>
+        <text x="110" y="185" text-anchor="middle" font-family="Inter" font-size="9.5" fill="#7A7F8A">Landing → Reg</text>
+        <rect x="62" y="75" width="32" height="80" rx="5" fill="#264EF7" fill-opacity=".3"/>
+        <rect x="97" y="35" width="32" height="120" rx="5" fill="#264EF7" fill-opacity=".3" opacity=".5"/>
+        <text x="78" y="70" text-anchor="middle" font-family="Space Grotesk" font-size="9" font-weight="600" fill="#264EF7">20%</text>
+        <text x="113" y="30" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">40% ideal</text>
+        <text x="250" y="185" text-anchor="middle" font-family="Inter" font-size="9.5" fill="#7A7F8A">Reg → Activated</text>
+        <rect x="218" y="75" width="64" height="80" rx="5" fill="#264EF7"/>
+        <text x="250" y="70" text-anchor="middle" font-family="Space Grotesk" font-size="9" font-weight="600" fill="#0B0C10">≥ 30%</text>
+        <text x="390" y="185" text-anchor="middle" font-family="Inter" font-size="9.5" fill="#7A7F8A">Consumer → Paid</text>
+        <rect x="366" y="148" width="48" height="7" rx="3" fill="#264EF7"/>
+        <text x="390" y="143" text-anchor="middle" font-family="Space Grotesk" font-size="9" font-weight="600" fill="#0B0C10">≥ 1.5%</text>
+        <text x="520" y="185" text-anchor="middle" font-family="Inter" font-size="9.5" fill="#7A7F8A">ProC / Tool → Paid</text>
+        <rect x="490" y="122" width="60" height="33" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <text x="520" y="117" text-anchor="middle" font-family="Space Grotesk" font-size="9" font-weight="600" fill="#0B0C10">5–8%</text>
+        <text x="652" y="185" text-anchor="middle" font-family="Inter" font-size="9.5" fill="#7A7F8A">SMB SaaS → Paid</text>
+        <rect x="620" y="97" width="64" height="58" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <text x="652" y="92" text-anchor="middle" font-family="Space Grotesk" font-size="9" font-weight="600" fill="#0B0C10">10–15%</text>
+        <text x="800" y="185" text-anchor="middle" font-family="Inter" font-size="9.5" fill="#7A7F8A">Enterprise Demo</text>
+        <rect x="768" y="68" width="64" height="87" rx="4" fill="#07EDD8"/>
+        <text x="800" y="62" text-anchor="middle" font-family="Space Grotesk" font-size="9" font-weight="600" fill="#0B0C10">15–25%</text>
+      </svg>
+      <div class="chart-cap">Benchmark conversion rates by funnel stage and business model. Do not scale paid acquisition until your funnel hits these thresholds.</div>
+    </div>
+  </div>
+
+  <div class="part-head">
+    <span class="part-tag">Course Contents</span>
+    <h2>Roadmap</h2>
+    <p class="desc">Twelve sections — five core sessions, six client-type playbooks, and a master tools appendix.</p>
+  </div>
+  <div class="subsec" style="padding-bottom:8px">
+    <div class="roadmap">
+      <a class="item" href="#s1"><div class="letter">01</div><div class="title">Session 1: Find the Truth</div><div class="desc">PMF, positioning, pricing, metrics</div></a>
+      <a class="item" href="#s2"><div class="letter">02</div><div class="title">Session 2: Brand Awareness</div><div class="desc">Founder brand, PR, SEO/GEO, social search, KOL, UGC</div></a>
+      <a class="item" href="#s3"><div class="letter">03</div><div class="title">Session 3: User Acquisition</div><div class="desc">Launch, PLG/SLG/CLG/MLG, PLS, mobile growth, ASO</div></a>
+      <a class="item" href="#s4"><div class="letter">04</div><div class="title">Session 4: Retention &amp; Monetization</div><div class="desc">Engagement, mobile monetization, community, partnerships</div></a>
+      <a class="item" href="#s5"><div class="letter">05</div><div class="title">Session 5: Fundraising</div><div class="desc">Stage criteria, warm intros, narrative</div></a>
+      <a class="item" href="#s6a"><div class="letter">6A</div><div class="title">Playbook: Tech SaaS</div><div class="desc">PLG + PLS</div></a>
+      <a class="item" href="#s6b"><div class="letter">6B</div><div class="title">Playbook: B2B</div><div class="desc">SLG + ABM</div></a>
+      <a class="item" href="#s6c"><div class="letter">6C</div><div class="title">Playbook: B2C</div><div class="desc">PLG + Habit</div></a>
+      <a class="item" href="#s6d"><div class="letter">6D</div><div class="title">Playbook: E-commerce</div><div class="desc">DTC + Retention</div></a>
+      <a class="item" href="#s6e"><div class="letter">6E</div><div class="title">Playbook: Professional Services</div><div class="desc">Referral + Reputation</div></a>
+      <a class="item" href="#s6f"><div class="letter">6F</div><div class="title">Playbook: Gaming</div><div class="desc">D1 Retention + Live Ops</div></a>
+      <a class="item" href="#appendix"><div class="letter">◆</div><div class="title">Master Tools Appendix</div><div class="desc">21 growth domains, canonical tool stack</div></a>
+    </div>
+
+    <div class="callout" style="margin-top:22px">
+      <span class="clabel">The Master Doctrine</span>
+      <strong>One loop. Dominate it.</strong> Every durable company scales through a single dominant growth loop. Your job is to identify which loop and make it irresistible. Everything else — channels, tools, campaigns — is support structure. Before any engagement, run three filters: (1) What is the ONE unfair advantage? (2) Which 2–3 channels match that advantage? (3) Is the conversion funnel healthy enough to justify spending on acquisition?
+    </div>
+  </div>
+
+  <div class="part-head" id="s1">
+    <span class="part-tag">Session 1 · 90 min</span>
+    <h2>Find the Truth</h2>
+    <p class="desc">Before any marketing or growth tactic, you need to know whether the product actually delivers value, for whom, at what price. Sessions that skip this stage build growth machines that amplify the wrong product to the wrong people.</p>
+  </div>
+
+  <div class="subsec">
+    <h3><span class="num">1.1</span> PMF &amp; User Research</h3>
+
+    <div class="pq">"Product market fit is something where you absolutely know it when you see it. Therefore if you don't absolutely know it, you don't have it."<span class="ps">— Matt MacInnis</span></div>
+
+    <p>PMF is not a binary switch. It is a spectrum that moves through four levels:</p>
+
+    <div class="week-grid">
+      <div class="week-box"><span class="wnum">Level 1</span><strong>Problem Fit</strong> — Real people have the problem you're solving. You've confirmed demand without building anything.</div>
+      <div class="week-box"><span class="wnum">Level 2</span><strong>Solution Fit</strong> — Your solution solves the problem. Users who try it get value and say so.</div>
+      <div class="week-box"><span class="wnum">Level 3</span><strong>Product Fit</strong> — Your product reliably delivers that solution at scale. Onboarding works. Retention is positive.</div>
+      <div class="week-box"><span class="wnum">Level 4</span><strong>Market Fit</strong> — A large enough segment buys repeatedly. CAC is recoverable. NRR exceeds 100%. The machine works.</div>
+    </div>
+
+    <div class="callout"><span class="clabel">The Sean Ellis Test</span>Survey active users: "How would you feel if you could no longer use this product?" If <strong>&lt;40% answer "Very disappointed"</strong>, you do not have PMF. Run by segment — you may have PMF with one ICP but not another. HeyGen scored &gt;40% among enterprise comms teams but not among casual video creators.</div>
+
+    <h4>PMF Loss Signals — Watch for These</h4>
+    <ul>
+      <li>Rising churn despite growing acquisition — the bucket leaks faster than you fill it</li>
+      <li>Support tickets cluster around the same 2–3 failure points — onboarding is broken</li>
+      <li>NPS is flat or declining quarter-over-quarter despite product updates</li>
+      <li>Sales cycle extends — buyers need more convincing, which means value proposition is unclear</li>
+      <li>Users who were "activated" in month 1 don't return in month 3</li>
+    </ul>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">HeyGen: Narrowing ICP to Find PMF</div>
+      <p>HeyGen launched as an AI video creation tool for "anyone who makes videos." They had thousands of users but inconsistent retention. The breakthrough came when they ran Sean Ellis tests segmented by use case. Enterprise comms teams — those creating multilingual training and marketing videos — scored 67% "Very disappointed." Casual creators scored 18%. HeyGen rebuilt messaging and onboarding exclusively around the enterprise use case, tripling retention among the segment that mattered. By 2024 they were at $35M ARR.</p>
+      <div class="cs-lesson"><b>Lesson:</b> Broad ICP = diluted value. Narrow until the Sean Ellis score exceeds 40% in a segment large enough to build a business on.</div>
+    </div>
+
+    <h4>User Interview SOP</h4>
+    <div class="loop-card">
+      <div class="lclabel">5-Step Interview Protocol</div>
+      <ol>
+        <li><strong>Recruit the right people</strong> — current users, lapsed users, and non-users who match your ICP. Never friends.</li>
+        <li><strong>Start with context, not product</strong> — "Walk me through the last time you dealt with [problem]." You want to understand their world before showing yours.</li>
+        <li><strong>Probe the status quo</strong> — "What do you do today when this happens? What do you hate about it?"</li>
+        <li><strong>Test willingness to pay (WTP)</strong> — Van Westendorp price sensitivity meter: too cheap / bargain / getting expensive / too expensive. You want the range between "bargain" and "getting expensive."</li>
+        <li><strong>Synthesize across 8–10 interviews</strong> — look for pattern convergence in Dovetail or Notion, not individual outliers.</li>
+      </ol>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th><th>Best For</th></tr></thead>
+      <tbody>
+        <tr><td>Survey &amp; WTP testing</td><td>Typeform, Tally, SurveyMonkey</td><td>Quantitative signal at scale</td></tr>
+        <tr><td>User interview</td><td>Lookback, UserTesting, Maze</td><td>Moderated + unmoderated sessions</td></tr>
+        <tr><td>Interview recording</td><td>Otter.ai, Granola, Fireflies.ai</td><td>Transcription + AI summaries</td></tr>
+        <tr><td>Research synthesis</td><td>Dovetail, Notion AI</td><td>Theme extraction across interviews</td></tr>
+        <tr><td>PMF analytics</td><td>Mixpanel, PostHog</td><td>Retention cohort analysis</td></tr>
+        <tr><td>AI synthesis</td><td>Claude</td><td>Pattern recognition across 20+ transcripts</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">1.2</span> Positioning &amp; Pricing</h3>
+
+    <div class="pq">"Weak positioning hurts you in the early stages of pipeline — people don't get what you are."<span class="ps">— April Dunford</span></div>
+
+    <p>Positioning answers one question in the buyer's mind: <em>why this, instead of that?</em> Most startups describe what their product does (features). April Dunford's framework forces you to describe what makes it <em>uniquely better for a specific buyer vs. a specific alternative</em>.</p>
+
+    <div class="loop-card">
+      <div class="lclabel">April Dunford's 5-Component Positioning Framework</div>
+      <ol>
+        <li><strong>Competitive alternatives</strong> — what would buyers do if your product didn't exist? (Excel, hiring someone, a competitor, doing nothing)</li>
+        <li><strong>Unique attributes</strong> — what do you have that alternatives don't?</li>
+        <li><strong>Value (not features)</strong> — what value do those attributes unlock for the buyer?</li>
+        <li><strong>Segmentation</strong> — who cares most about that specific value? That's your best-fit ICP.</li>
+        <li><strong>Market category</strong> — what frame do you put around yourself? The wrong category makes you look expensive or irrelevant.</li>
+      </ol>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Supabase: Positioning Against Firebase</div>
+      <p>Firebase was the dominant backend-as-a-service for developers. Supabase positioned not as "another BaaS" but as "the open-source Firebase alternative." Their tagline: "Build in a weekend. Scale to millions." This single line collapsed the complexity objection (scale is hard) while owning the speed advantage (weekend = fast). By naming the competitor in their positioning, they captured every developer searching for "Firebase alternative" on Google — and converted them with open-source credibility.</p>
+      <div class="cs-lesson"><b>Lesson:</b> Naming your competitive alternative in positioning is not weakness — it's the fastest path to being understood by the right buyer.</div>
+    </div>
+
+    <h4>Pricing Principles</h4>
+    <div class="week-grid">
+      <div class="week-box"><span class="wnum">Principle 1</span><strong>Price is a value signal.</strong> Pricing too low communicates low quality. Price at what the segment believes the value is worth, not at cost + margin.</div>
+      <div class="week-box"><span class="wnum">Principle 2</span><strong>Freemium gates the wrong thing.</strong> Most teams gate premium features. Masters gate <em>scale</em> — free up to X, paid above X. This converts power users, not casual browsers.</div>
+      <div class="week-box"><span class="wnum">Principle 3</span><strong>Self-serve ceiling exists.</strong> Deals above $25–50K ACV almost always need a human in the loop. Build the PLS motion (product-led sales) before you hit the ceiling.</div>
+      <div class="week-box"><span class="wnum">Principle 4</span><strong>Reverse trial works.</strong> Give users the paid tier free for 14 days, then downgrade. Converts 2–3x better than free tier → upgrade, because loss aversion beats feature discovery.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>Competitive intelligence</td><td>Klue, Crayon, Kompyte, Similarweb</td></tr>
+        <tr><td>Win/loss analysis</td><td>Gong, Chorus (ZoomInfo)</td></tr>
+        <tr><td>Pricing analytics</td><td>ProfitWell (Paddle), Baremetrics, ChartMogul</td></tr>
+        <tr><td>A/B test pricing pages</td><td>Optimizely, LaunchDarkly</td></tr>
+        <tr><td>Market &amp; ICP research</td><td>Perplexity, Claude, G2, Capterra</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">1.3</span> Metrics &amp; Benchmarks</h3>
+    <p>The North Star metric is the one number that best captures how much value you're delivering. Everything else is a leading or lagging indicator of it.</p>
+
+    <div class="vis-wrap">
+      <div class="vis-title">Retention Curve Shape — What Each Means</div>
+      <svg viewBox="0 0 820 180" xmlns="http://www.w3.org/2000/svg">
+        <line x1="60" y1="20" x2="60" y2="150" stroke="#E6E8EE" stroke-width="1.5"/>
+        <line x1="60" y1="150" x2="800" y2="150" stroke="#E6E8EE" stroke-width="1.5"/>
+        <text x="10" y="28" font-family="Inter" font-size="9" fill="#7A7F8A">100%</text>
+        <text x="22" y="68" font-family="Inter" font-size="9" fill="#7A7F8A">60%</text>
+        <text x="22" y="110" font-family="Inter" font-size="9" fill="#7A7F8A">30%</text>
+        <text x="60" y="165" font-family="Inter" font-size="9" fill="#7A7F8A">D1</text>
+        <text x="240" y="165" font-family="Inter" font-size="9" fill="#7A7F8A">D7</text>
+        <text x="440" y="165" font-family="Inter" font-size="9" fill="#7A7F8A">D30</text>
+        <text x="640" y="165" font-family="Inter" font-size="9" fill="#7A7F8A">D90</text>
+        <line x1="60" y1="65" x2="800" y2="65" stroke="#E6E8EE" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="60" y1="107" x2="800" y2="107" stroke="#E6E8EE" stroke-width="1" stroke-dasharray="4,4"/>
+        <path d="M 60,28 C 180,80 300,130 800,148" stroke="#FF5C7A" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+        <text x="660" y="155" font-family="Inter" font-size="10" fill="#FF5C7A">L-shaped (bad)</text>
+        <path d="M 60,28 C 160,70 280,95 800,90" stroke="#264EF7" stroke-width="2.5" fill="none"/>
+        <text x="660" y="87" font-family="Inter" font-size="10" fill="#0B0C10">Flattening (moat)</text>
+        <path d="M 60,28 C 160,90 280,105 440,100 C 580,94 680,78 800,82" stroke="#07EDD8" stroke-width="2" fill="none" stroke-dasharray="8,3"/>
+        <text x="660" y="100" font-family="Inter" font-size="10" fill="#0B0C10">Smile (seasonal)</text>
+      </svg>
+      <div class="vis-cap">Flattening retention = defensible moat. If your D30 approaches D7, you have strong product stickiness.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>North Star by Business Model</th><th>Metric</th><th>Secondary KPIs</th></tr></thead>
+      <tbody>
+        <tr><td>SaaS / PLG</td><td>Weekly Active Users reaching Aha Moment</td><td>Activation rate, NRR, PQL conversion</td></tr>
+        <tr><td>B2B Enterprise</td><td>ARR / Net Revenue Retention</td><td>Win rate, ACV, time-to-close</td></tr>
+        <tr><td>Consumer app</td><td>DAU / D30 retention</td><td>DAU:MAU ratio, K-factor, LTV:CAC</td></tr>
+        <tr><td>E-commerce</td><td>Revenue per customer (LTV)</td><td>Repeat purchase rate, email revenue %, ROAS</td></tr>
+        <tr><td>Mobile game</td><td>D7 retention</td><td>ARPDAU, session length, K-factor</td></tr>
+        <tr><td>Marketplace</td><td>GMV or Liquidity rate</td><td>Repeat take rate, supply/demand balance</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>Product analytics</td><td>Mixpanel, Amplitude, PostHog, Heap</td></tr>
+        <tr><td>Web analytics</td><td>GA4, Plausible, Fathom</td></tr>
+        <tr><td>CDP / data pipeline</td><td>Segment, RudderStack, mParticle</td></tr>
+        <tr><td>BI / dashboards</td><td>Looker, Metabase, Tableau, Sigma</td></tr>
+        <tr><td>AI analytics</td><td>ThoughtSpot, Julius AI</td></tr>
+        <tr><td>Revenue analytics</td><td>Baremetrics, ChartMogul, ProfitWell</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Diagnose your PMF ↗</a></div>
+
+  <div class="part-head" id="s2">
+    <span class="part-tag">Session 2 · 90 min</span>
+    <h2>Tell the Story — Brand &amp; Awareness</h2>
+    <p class="desc">Brand is not a logo. It is a coherent promise that makes one type of person feel seen and makes everyone else self-select out. The best brands in tech aren't neutral — they have a point of view that attracts passionate advocates and repels the wrong buyers.</p>
+  </div>
+
+  <div class="subsec">
+    <h3><span class="num">2.1</span> Founder Brand</h3>
+
+    <div class="pq">"Attention is the ultimate currency. Authenticity beats polish. Founders must own their narrative."<span class="ps">— Lulu Cheng Meservey</span></div>
+
+    <p>A founder with 100K followers in the right niche is worth more than $200K in ad spend. Founder brand is a compounding distribution asset — every post extends reach for free, builds trust faster than any ad, and creates inbound that no SDR can replicate.</p>
+
+    <h4>Platform Playbooks</h4>
+    <div class="week-grid">
+      <div class="week-box"><span class="wnum">LinkedIn</span><strong>Tone:</strong> Professional insight with personality. <strong>What works:</strong> contrarian takes on industry norms, process breakdowns ("here's how we closed our Series A"), specific numbers ("we went from 0 to 10K users in 8 weeks — here's what actually drove it"). <strong>Cadence:</strong> 3–4 posts/week. DM reply rate: 10–15%.</div>
+      <div class="week-box"><span class="wnum">Twitter / X</span><strong>Tone:</strong> Direct, sharp, opinionated. <strong>What works:</strong> threads with 10–15 specific lessons, hot takes on product, live build-in-public updates. <strong>Cadence:</strong> 1–2 posts/day. First 60 seconds after posting determine algorithmic reach — reply to every early comment.</div>
+      <div class="week-box"><span class="wnum">XHS (小红书)</span><strong>Tone:</strong> Lifestyle + insight hybrid. <strong>What works:</strong> "a day in the life of a founder" formats, product use in real-life contexts, emotional storytelling with product integration. <strong>Cadence:</strong> 4–5 posts/week. Discovery is keyword-driven — use exact-match keyword phrases in first line.</div>
+      <div class="week-box"><span class="wnum">Hook Bank</span>Start with: "Most [category] advice is wrong. Here's what actually works." / "I spent $200K on ads before I learned this one thing." / "Nobody talks about this but..." / "After [X] years, here's the uncomfortable truth." / "We [achieved result]. Here's the system."</div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Gong: Category Creation Through Thought Leadership</div>
+      <p>Gong's CEO Amit Bendov didn't just sell conversation intelligence — he created the category of "Revenue Intelligence." Every LinkedIn post, every webinar, every piece of content was positioned around this new frame. Their "State of Revenue Intelligence" annual report became industry-required reading, cited by VCs and sales leaders. They controlled the category definition, so any competitor was automatically "a Gong alternative." This positioning contributed to a $7.25B valuation.</p>
+      <div class="cs-lesson"><b>Lesson:</b> The company that names the category wins the category. Create the frame, then own it through consistent thought leadership.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>LinkedIn growth &amp; scheduling</td><td>Taplio, Shield Analytics, LinkedIn Sales Navigator</td></tr>
+        <tr><td>Twitter / X growth</td><td>Hypefury, Typefully, Black Magic</td></tr>
+        <tr><td>Multi-platform scheduling</td><td>Buffer, Later, Hootsuite, Metricool</td></tr>
+        <tr><td>AI content drafting</td><td>Claude, Jasper, Writer.com, Copy.ai</td></tr>
+        <tr><td>Analytics</td><td>Sprout Social, Iconosquare</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">2.2</span> Storytelling &amp; PR</h3>
+
+    <div class="pq">"Never fight a story with a statistic. Always fight story with story."<span class="ps">— Lulu Cheng Meservey</span></div>
+
+    <h4>The Go Direct Framework</h4>
+    <p>Traditional PR waits for media coverage. Go Direct means the company publishes its own narrative through owned channels before, during, and after any media coverage. When journalists do write about you, they pull from your framing.</p>
+
+    <div class="loop-card">
+      <div class="lclabel">4 PR Narrative Structures</div>
+      <ol>
+        <li><strong>Origin story</strong> — "We built this because we faced the problem ourselves." Authenticity + urgency. (Airbnb: "We rented air mattresses to pay rent and accidentally built a company.")</li>
+        <li><strong>Foil story</strong> — "The way everyone does this is wrong, and here's why." Creates tension, positions you as the smart alternative. (Notion: "Spreadsheets aren't databases. Docs aren't wikis. We're both.")</li>
+        <li><strong>Movement story</strong> — "We're not selling a product, we're starting a movement." Bigger than you. (Patagonia: "We're in business to save our home planet.")</li>
+        <li><strong>Data story</strong> — "Here's a trend only we can see because of our data." Credibility + exclusivity. (Gong's sales data reports, Stripe's developer economy reports.)</li>
+      </ol>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Airbnb: Storytelling as Survival</div>
+      <p>During COVID, Airbnb hosts were facing financial ruin. Instead of a corporate press release, Airbnb CEO Brian Chesky wrote an open letter to employees when they had to lay off 25% of the team — with radical transparency about severance, healthcare, and why it happened. The letter went viral. Journalists wrote about it as an example of exceptional leadership. During one of the worst crises in travel history, Airbnb built more brand trust than most companies do in a decade. Their IPO in December 2020 — despite $700M losses — was oversubscribed.</p>
+      <div class="cs-lesson"><b>Lesson:</b> Authentic storytelling in a crisis builds more trust than a polished statement. The vulnerability is the story.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>PR / media database</td><td>Muck Rack, Cision, Meltwater</td></tr>
+        <tr><td>Press distribution</td><td>PR Newswire, PRWeb, Business Wire</td></tr>
+        <tr><td>Media monitoring</td><td>Mention, Brand24, Google Alerts</td></tr>
+        <tr><td>AI-assisted PR</td><td>Propel (AI PR platform), Onclusive</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">2.3</span> SEO &amp; GEO (AI Search Optimization)</h3>
+
+    <h4>SEO in 2025: Two Parallel Engines</h4>
+    <p>Traditional SEO (Google Search) still drives enormous volume, but GEO — Generative Engine Optimization — is rapidly becoming a parallel channel. ChatGPT, Perplexity, and Claude synthesize answers from web content. Being cited in those answers requires different tactics than ranking in Google.</p>
+
+    <div class="week-grid">
+      <div class="week-box"><span class="wnum">Traditional SEO</span><strong>Priority keywords:</strong> Bottom-of-funnel first ("best CRM for startups"). <strong>Content type:</strong> Comparison pages, alternative pages, how-to guides. <strong>Authority building:</strong> Backlinks from domain-relevant sites. <strong>Case:</strong> HubSpot's 500+ comparison pages drive 30% of their trial signups.</div>
+      <div class="week-box"><span class="wnum">GEO (AI Search)</span><strong>What works:</strong> Original data and research (AI cites sources). Comprehensive definitional articles. FAQ content that answers exactly what AI models are asked. <strong>Format:</strong> Clear headings, structured data. <strong>Monitoring:</strong> Profound, Otterly.ai — track when AI answers cite your domain.</div>
+      <div class="week-box"><span class="wnum">Domain Hacks</span>SmallPDF bought expired high-authority domains and redirected 301s to their content. This transferred decades of domain authority overnight. Works for any content-heavy product. Investment: $2–20K. Return: equivalent to 2 years of organic link building.</div>
+      <div class="week-box"><span class="wnum">Topical Authority</span>Don't scatter content across 50 topics. Pick 3–5 core topics and dominate them. Notion owns "project management templates," "wiki software," and "team collaboration" as topic clusters. Google now rewards clusters over individual articles.</div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">HubSpot: The Content Machine That Built a $20B Company</div>
+      <p>HubSpot's content strategy started in 2006 — years before "content marketing" was a term. They published educational content on inbound marketing (a term they coined), building topical authority around their product category. By the time competitors arrived, HubSpot owned thousands of keywords across the marketing funnel. Today, their blog receives 7M+ monthly visits. Most visitors are in problem-awareness mode — perfect for building brand trust before they consider buying. HubSpot's organic search alone is valued at $500M+ in equivalent paid traffic.</p>
+      <div class="cs-lesson"><b>Lesson:</b> The earlier you start building topical authority, the more compounding returns you accumulate. SEO is a content endowment, not a campaign.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>SEO research</td><td>Ahrefs, SEMrush, Moz</td></tr>
+        <tr><td>Content optimization</td><td>Surfer SEO, Clearscope, MarketMuse, Frase</td></tr>
+        <tr><td>Technical SEO</td><td>Screaming Frog, Sitebulb</td></tr>
+        <tr><td>GEO monitoring</td><td>Profound, Otterly.ai, AI Search Monitor</td></tr>
+        <tr><td>CMS / publishing</td><td>WordPress, Webflow, Contentful</td></tr>
+        <tr><td>AI writing</td><td>Claude, Jasper, Writer.com</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">2.4</span> Social Search (TikTok / Instagram as Search Engine)</h3>
+
+    <p>Gen Z uses TikTok before Google for recommendations, how-tos, and product discovery. For consumer products, social search is now the primary discovery channel for the 18–34 demographic.</p>
+
+    <div class="callout"><span class="clabel">5-Dimension Viability Audit</span>Before investing in social search for a client: (1) Search volume — do people actually search this topic on TikTok? (2) Content competition — how many creators are in this niche? (3) Creator saturation — are there already 100+ creators with 100K+ followers? (4) Monetization fit — does the niche attract buyers, not just browsers? (5) Brand safety — can you show up authentically without brand risk?</div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Duolingo: The Brand That Learned to Troll Itself</div>
+      <p>Duolingo's TikTok strategy is case-study-famous. Their green owl mascot "Duo" was reframed as a passive-aggressive stalker reminding users to practice. The account accumulated 7M+ followers not through product demos but through absurdist humor that went viral. Crucially, every video still embedded a behavioral nudge — "you haven't practiced today." The result: TikTok drove a 50%+ increase in app downloads during their peak viral moments, all at zero paid media cost.</p>
+      <div class="cs-lesson"><b>Lesson:</b> On TikTok, entertainment and product message must coexist. Find the tension or humor in your product's core mechanic and dramatize it.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>TikTok analytics</td><td>Pentos, Analisa.io, TikTok Analytics (native)</td></tr>
+        <tr><td>Instagram analytics</td><td>Iconosquare, Social Blade</td></tr>
+        <tr><td>Video editing</td><td>CapCut, DaVinci Resolve, Adobe Rush</td></tr>
+        <tr><td>AI video / avatar</td><td>HeyGen, Synthesia, Descript</td></tr>
+        <tr><td>Scheduling</td><td>Later, Planoly, TikTok Scheduler</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">2.5</span> KOL &amp; Influencer Marketing</h3>
+
+    <div class="loop-card">
+      <div class="lclabel">Platform Price Benchmarks (2025)</div>
+      <p>Use these as anchors when negotiating. Always open at 30% of quoted price and run 4–5 rounds.</p>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Platform</th><th>Tier</th><th>Follower Range</th><th>Market Price</th><th>Open At</th></tr></thead>
+      <tbody>
+        <tr><td>Twitter / X</td><td>Micro</td><td>10K–100K</td><td>$200–$2K/post</td><td>$60–$600</td></tr>
+        <tr><td>Twitter / X</td><td>Macro</td><td>500K+</td><td>$5K–$30K/post</td><td>$1.5K–$9K</td></tr>
+        <tr><td>YouTube</td><td>Mid-tier</td><td>100K–500K</td><td>$3K–$15K/video</td><td>$900–$4.5K</td></tr>
+        <tr><td>YouTube</td><td>Macro</td><td>1M+</td><td>$20K–$100K/video</td><td>$6K–$30K</td></tr>
+        <tr><td>TikTok</td><td>Micro</td><td>50K–500K</td><td>$500–$5K/video</td><td>$150–$1.5K</td></tr>
+        <tr><td>Instagram</td><td>Mid-tier</td><td>100K–1M</td><td>$2K–$20K/post</td><td>$600–$6K</td></tr>
+        <tr><td>LinkedIn</td><td>Thought leader</td><td>50K+</td><td>$3K–$25K/post</td><td>$900–$7.5K</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="compare-chart">
+      <div class="cc-cap">Relative Price Ceiling by Platform — Top Tier, Per Post/Video</div>
+      <div class="cc-row"><div class="cc-label">YouTube (macro)</div><div class="cc-bar"><div class="cc-fill" style="width:100%;background:var(--blue)"></div></div><div class="cc-val">up to $100K</div></div>
+      <div class="cc-row"><div class="cc-label">Twitter/X (macro)</div><div class="cc-bar"><div class="cc-fill" style="width:30%;background:var(--blue);opacity:.55"></div></div><div class="cc-val">up to $30K</div></div>
+      <div class="cc-row"><div class="cc-label">LinkedIn (thought leader)</div><div class="cc-bar"><div class="cc-fill" style="width:25%;background:var(--blue);opacity:.55"></div></div><div class="cc-val">up to $25K</div></div>
+      <div class="cc-row"><div class="cc-label">Instagram (mid-tier)</div><div class="cc-bar"><div class="cc-fill" style="width:20%;background:var(--blue);opacity:.3"></div></div><div class="cc-val">up to $20K</div></div>
+      <div class="cc-row"><div class="cc-label">TikTok (micro)</div><div class="cc-bar"><div class="cc-fill" style="width:5%;background:var(--teal)"></div></div><div class="cc-val">up to $5K</div></div>
+    </div>
+
+    <div class="callout"><span class="clabel">The Three-Action Package</span>Never buy a single post. Always bundle: <strong>1 main post + 1 story/reel repost + 1 comment engagement</strong>. This triples exposure at marginal cost. The comment from the creator makes your brand visible to their audience a second time — in a context that looks organic.</div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>KOL discovery</td><td>Modash, Upfluence, HYPR, AspireIQ</td></tr>
+        <tr><td>Campaign management</td><td>Grin, Creator.co, Traackr</td></tr>
+        <tr><td>Performance tracking</td><td>Magic Links, Refersion</td></tr>
+        <tr><td>Outreach at scale</td><td>Apollo.io, Instantly.ai</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">2.6</span> Social Content &amp; UGC</h3>
+
+    <p>User-generated content converts 4× better than brand-created content because it carries social proof. The goal is to create systems that generate UGC consistently, not wait for it to happen.</p>
+
+    <div class="week-grid">
+      <div class="week-box"><span class="wnum">UGC Matrix</span><strong>Type A — Testimonial videos:</strong> $150–$400/piece. Highest trust signal. <strong>Type B — Product demos:</strong> $80–$200/piece. Best for conversion. <strong>Type C — Lifestyle / use-case:</strong> $50–$150/piece. Best for awareness. Brief must specify exact hook, product moment, and CTA.</div>
+      <div class="week-box"><span class="wnum">Reddit Strategy</span>Reddit resists overt marketing but rewards authenticity. Best approach: Hire 2–3 community members as paid moderators who surface your product naturally in relevant threads. Never pay for posts. Never post from brand accounts. Track subreddits where your ICP lives. Respond to problems with genuine help, product second.</div>
+      <div class="week-box"><span class="wnum">Viral Loop Design</span>The mechanic: sharing should be a natural extension of the core product action. <strong>Loom:</strong> sending a video IS sharing. <strong>Wordle:</strong> sharing your grid IS the game. <strong>Figma:</strong> collaborating IS sharing. Design virality into the product action, not as an afterthought "Share" button.</div>
+      <div class="week-box"><span class="wnum">Phantom Buster</span>Automate LinkedIn engagement sequences: (1) visit profile, (2) connect with personalized note, (3) follow up with value-add message. 8–12% connection acceptance on targeted lists. Never use generic templates — personalize at the company-signal level using Clay enrichment.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>UGC collection</td><td>Yotpo, Bazaarvoice, Loox, Okendo</td></tr>
+        <tr><td>Social proof &amp; reviews</td><td>Trustpilot, G2, Capterra, Stamped.io</td></tr>
+        <tr><td>Content creation</td><td>Canva, Adobe Express, Figma</td></tr>
+        <tr><td>Automation</td><td>Phantombuster, Zapier, Make</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Craft Brand Narrative ↗</a></div>
+
+  <div class="part-head" id="s3">
+    <span class="part-tag">Session 3 · 90 min</span>
+    <h2>Light the Fire — User Acquisition</h2>
+    <p class="desc">Acquisition is only valuable if the users you bring in stay. Before scaling any channel, confirm your activation and D7 retention hit benchmarks. Otherwise you're accelerating churn, not growth.</p>
+  </div>
+
+  <div class="subsec">
+    <h3><span class="num">3.1</span> Launch Playbook</h3>
+    <p>A launch is not a day — it's a 6-week campaign with the "launch day" in the middle. The pre-launch builds pressure; the post-launch converts momentum into users and press.</p>
+
+    <div class="loop-card">
+      <div class="lclabel">6-Week Launch SOP</div>
+      <div class="week-grid" style="margin-top:6px">
+        <div class="week-box"><span class="wnum">Weeks -6 to -4</span><strong>Build the audience:</strong> Founder posts daily on target platforms. Identify and brief 10–20 KOLs. Create waitlist with referral mechanic (GrowSurf, Viral Loops). Seed private communities (Slack groups, Discord servers) with early access offer.</div>
+        <div class="week-box"><span class="wnum">Weeks -3 to -2</span><strong>Warm the machine:</strong> Ship teaser content (behind-the-scenes, problems-we-solve series). Send KOL assets and brief. Post Product Hunt "upcoming" page. Collect testimonials from beta users. Prepare PR pitch for 5 target journalists.</div>
+        <div class="week-box"><span class="wnum">Launch Week</span><strong>5-day drop structure (Supabase model):</strong> Day 1: flagship feature. Day 2: integration or partnership. Day 3: customer story. Day 4: data / research release. Day 5: community event or AMA. Each day is its own announcement.</div>
+        <div class="week-box"><span class="wnum">Weeks +1 to +2</span><strong>Convert the momentum:</strong> Follow up with all waitlist signups within 24h. Run retargeting ads to site visitors from launch week. Publish launch retrospective (transparency builds trust). Submit to Product Hunt if not already done.</div>
+      </div>
+    </div>
+
+    <h4>Product Hunt Strategy</h4>
+    <div class="callout"><span class="clabel">PH Full Strategy</span><strong>Hunter selection:</strong> Find a hunter with 3K+ followers and past Top 5 launches. DM them 4 weeks out. <strong>Comment velocity:</strong> First 2 hours are critical. Have 50+ supporters lined up to comment (not vote) immediately at 12:01am PT. <strong>KOL coordination:</strong> Ask each KOL to post their Product Hunt link to their audience at launch time. <strong>Timing:</strong> Tuesday–Thursday launches outperform Monday and Friday. Launch at 12:01am PT.</div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Linear: The Invite-Only Launch That Created FOMO</div>
+      <p>Linear launched in 2020 with a tiny team and zero paid marketing. They made the product invite-only — not as a genuine technical constraint but as a positioning move. The scarcity created organic buzz on Twitter among developers. Early access felt like joining an exclusive club. Their design-forward approach and keyboard-first product generated obsessive word-of-mouth. The waitlist grew to 30,000+ before public launch. By keeping the product hard to access, they turned the launch itself into marketing. Linear was valued at $400M in their 2022 funding round.</p>
+      <div class="cs-lesson"><b>Lesson:</b> Artificial scarcity converts curious observers into active advocates. The waitlist is not just a queue — it's your first community.</div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Superhuman: Qualification as Brand Signal</div>
+      <p>Superhuman's waitlist didn't just collect emails — it asked qualifying questions: "What email client do you use? How many emails do you send per day? How would you rate your inbox management?" Two effects: (1) They collected ICP data before launch. (2) The qualification process itself made Superhuman feel premium. People who passed felt like they had earned access. At $30/month for an email app, the psychological framing of earned access justified the price. Waitlist: 275,000 people at peak.</p>
+      <div class="cs-lesson"><b>Lesson:</b> The application process IS the brand experience. Qualification communicates exclusivity better than any copywriting.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>Landing page</td><td>Carrd, Webflow, Framer</td></tr>
+        <tr><td>Waitlist + referral</td><td>Viral Loops, GrowSurf, ReferralHero</td></tr>
+        <tr><td>Email capture</td><td>Loops.so, Mailchimp, ConvertKit</td></tr>
+        <tr><td>Launch analytics</td><td>Mixpanel, PostHog, Hotjar</td></tr>
+        <tr><td>Coordinated posting</td><td>Buffer, Hypefury</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">3.2</span> Growth Engines: PLG / SLG / CLG / MLG</h3>
+
+    <div class="vis-wrap">
+      <div class="vis-title">Growth Loop Types — How Each Compounds</div>
+      <svg viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrM" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#264EF7"/></marker>
+          <marker id="arrT" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#07EDD8"/></marker>
+        </defs>
+        <rect x="10" y="10" width="190" height="180" rx="12" fill="#F5F6FA" stroke="#E6E8EE" stroke-width="1"/>
+        <text x="105" y="30" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="600" fill="#0B0C10" letter-spacing=".5">PLG LOOP</text>
+        <rect x="30" y="40" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="105" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">User gets value</text>
+        <line x1="105" y1="68" x2="105" y2="84" stroke="#264EF7" stroke-width="1.5" marker-end="url(#arrM)"/>
+        <rect x="30" y="85" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="105" y="103" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Shares / invites</text>
+        <line x1="105" y1="113" x2="105" y2="129" stroke="#264EF7" stroke-width="1.5" marker-end="url(#arrM)"/>
+        <rect x="30" y="130" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="105" y="148" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">New user activates</text>
+        <path d="M 30,144 C 10,144 10,54 30,54" stroke="#264EF7" stroke-width="1.5" fill="none" marker-end="url(#arrM)"/>
+        <text x="105" y="175" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Figma, Notion, Calendly</text>
+
+        <rect x="225" y="10" width="190" height="180" rx="12" fill="#F5F6FA" stroke="#E6E8EE" stroke-width="1"/>
+        <text x="320" y="30" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="600" fill="#0B0C10" letter-spacing=".5">SLG LOOP</text>
+        <rect x="245" y="40" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="320" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Marketing generates lead</text>
+        <line x1="320" y1="68" x2="320" y2="84" stroke="#264EF7" stroke-width="1.5" marker-end="url(#arrM)"/>
+        <rect x="245" y="85" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="320" y="103" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Sales closes deal</text>
+        <line x1="320" y1="113" x2="320" y2="129" stroke="#264EF7" stroke-width="1.5" marker-end="url(#arrM)"/>
+        <rect x="245" y="130" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="320" y="148" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Case study → new leads</text>
+        <path d="M 245,144 C 225,144 225,54 245,54" stroke="#264EF7" stroke-width="1.5" fill="none" marker-end="url(#arrM)"/>
+        <text x="320" y="175" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Salesforce, Gong, HubSpot</text>
+
+        <rect x="440" y="10" width="190" height="180" rx="12" fill="rgba(7,237,216,.06)" stroke="rgba(7,237,216,.35)" stroke-width="1"/>
+        <text x="535" y="30" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="600" fill="#0B0C10" letter-spacing=".5">CLG LOOP</text>
+        <rect x="460" y="40" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="535" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Community creates value</text>
+        <line x1="535" y1="68" x2="535" y2="84" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#arrT)"/>
+        <rect x="460" y="85" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="535" y="103" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Members recruit members</text>
+        <line x1="535" y1="113" x2="535" y2="129" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#arrT)"/>
+        <rect x="460" y="130" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="535" y="148" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Network effect grows</text>
+        <path d="M 460,144 C 440,144 440,54 460,54" stroke="#07EDD8" stroke-width="1.5" fill="none" marker-end="url(#arrT)"/>
+        <text x="535" y="175" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Notion, Slack, Discord</text>
+
+        <rect x="655" y="10" width="190" height="180" rx="12" fill="#F5F6FA" stroke="#E6E8EE" stroke-width="1"/>
+        <text x="750" y="30" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="600" fill="#0B0C10" letter-spacing=".5">MLG LOOP</text>
+        <rect x="675" y="40" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="750" y="58" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Content builds authority</text>
+        <line x1="750" y1="68" x2="750" y2="84" stroke="#264EF7" stroke-width="1.5" marker-end="url(#arrM)"/>
+        <rect x="675" y="85" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="750" y="103" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Inbound demand grows</text>
+        <line x1="750" y1="113" x2="750" y2="129" stroke="#264EF7" stroke-width="1.5" marker-end="url(#arrM)"/>
+        <rect x="675" y="130" width="150" height="28" rx="6" fill="#FFFFFF" stroke="#E6E8EE"/>
+        <text x="750" y="148" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46">Users create content</text>
+        <path d="M 675,144 C 655,144 655,54 675,54" stroke="#264EF7" stroke-width="1.5" fill="none" marker-end="url(#arrM)"/>
+        <text x="750" y="175" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">HubSpot, Ahrefs, Semrush</text>
+      </svg>
+      <div class="vis-cap">PLG and CLG produce compounding returns. SLG and MLG require ongoing investment but are more predictable.</div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Notion: PLG to CLG to Enterprise — The Full Journey</div>
+      <p>Notion launched in 2018 with a PLG motion: free tier, personal use, beautiful product. The "personal to team" expansion was engineered into the product — you create something great, want to share it with a colleague, and suddenly a team workspace gets created. CLG amplified this: Notion's ambassador program seeded college campuses with power users who became evangelists. By 2021, bottoms-up adoption had reached enterprise decision-makers who were already using Notion personally. Enterprise sales was almost pulling, not pushing. Notion reached $10B valuation without a traditional sales-led motion until well after their CLG had saturated the market.</p>
+      <div class="cs-lesson"><b>Lesson:</b> PLG seeds the individual. CLG builds the social proof. Enterprise sales harvests the installed base. The sequence matters.</div>
+    </div>
+
+    <h3><span class="num">3.3</span> Product-Led Sales (PLS)</h3>
+
+    <div class="pq">"Product-led sales converts the usage that you've generated via self-serve into a sales opportunity and attaches a salesperson to close a much larger contract."<span class="ps">— Elena Verna</span></div>
+
+    <div class="callout"><span class="clabel">PQL vs PQA</span><strong>PQL (Product Qualified Lead):</strong> An individual user showing high-intent behavior — invited 5+ teammates, exported data 3+ times, hit usage ceiling, opened pricing page. <strong>PQA (Product Qualified Account):</strong> A company with 3+ active users from the same domain, suggesting organic team adoption without a sales conversation.</div>
+
+    <div class="loop-card">
+      <div class="lclabel">High-Intent Signal Framework</div>
+      <div class="table-wrap" style="margin:8px 0 0"><table>
+        <thead><tr><th>Signal</th><th>Intent Level</th><th>Response</th></tr></thead>
+        <tbody>
+          <tr><td>Opened pricing page 3+ times</td><td>Very High</td><td>SDR outreach within 24h</td></tr>
+          <tr><td>Invited 5+ teammates</td><td>High</td><td>Automated expansion email + SDR follow-up</td></tr>
+          <tr><td>Hit free tier limit</td><td>High</td><td>In-app upgrade prompt + trial offer</td></tr>
+          <tr><td>3+ users from same domain</td><td>Medium-High</td><td>PQA alert → Account Executive assigned</td></tr>
+          <tr><td>Used API / integration</td><td>Medium</td><td>Developer-specific nurture sequence</td></tr>
+          <tr><td>Completed onboarding checklist</td><td>Medium</td><td>Success check-in email at Day 7</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>PQL scoring</td><td>Pendo, MadKudu, Endgame, Correlated</td></tr>
+        <tr><td>Usage-to-CRM signals</td><td>Amplitude / Mixpanel → Salesforce integration</td></tr>
+        <tr><td>CRM</td><td>Salesforce, HubSpot</td></tr>
+        <tr><td>Conversation intelligence</td><td>Gong, Chorus</td></tr>
+        <tr><td>Outreach automation</td><td>Outreach, Salesloft, Apollo.io</td></tr>
+        <tr><td>AI SDR / BDR</td><td>11x, Artisan, Regie.ai, Orum</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">3.4</span> Mobile App Growth</h3>
+    <p>Mobile app growth follows a strict prerequisite chain: ASO first (optimize the listing) → then paid UA → then retention optimization. Paying for installs before the listing is optimized is burning money. Paying for installs before D7 retention is proven is building a leaky bucket.</p>
+
+    <div class="loop-card">
+      <div class="lclabel">8-Week Mobile Launch Timeline</div>
+      <div class="week-grid" style="margin-top:6px">
+        <div class="week-box"><span class="wnum">Weeks 1–2</span>ASO audit: optimize title, subtitle, keywords, screenshots, and icon. Submit to TestFlight / closed beta. Collect 50+ reviews before launch to prime algorithm.</div>
+        <div class="week-box"><span class="wnum">Weeks 3–4</span>Soft launch in 2–3 lower-CPM markets (e.g. Philippines, South Africa). Optimize onboarding until D1 ≥ 30%. Fix crashes. Tune push notification permissions prompt placement.</div>
+        <div class="week-box"><span class="wnum">Weeks 5–6</span>Begin Apple Search Ads (branded + category keywords). Layer in creator UGC briefs. Set up Branch deep links for social ads → app store.</div>
+        <div class="week-box"><span class="wnum">Weeks 7–8</span>Full paid UA launch: scale Apple Search Ads, Google UAC, Meta. A/B test creatives (kill at $50 spend, scale winners). Apply for featuring with platform team.</div>
+      </div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Calm: Scaling to $2B Without a Traditional Sales Team</div>
+      <p>Calm grew to 100M+ downloads primarily through three channels. First, Apple Health integration — Calm appeared in Apple's recommended wellness apps, giving them zero-cost distribution inside iOS. Second, ASO dominance: they owned "meditation," "sleep sounds," and "anxiety relief" on both App Stores through relentless keyword optimization and 500K+ 5-star reviews. Third, celebrity voice content (Matthew McConaughey, Harry Styles narrating sleep stories) created PR hooks that traditional wellness apps couldn't afford to match. Each celebrity signing generated earned media worth 10× the talent cost.</p>
+      <div class="cs-lesson"><b>Lesson:</b> Platform partnerships (Apple Health) provide distribution that no ad budget can replicate. Get native to the platform before paying for acquisition.</div>
+    </div>
+
+    <h3><span class="num">3.5</span> App Store Optimization (ASO)</h3>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Element</th><th>iOS</th><th>Android</th><th>What Moves the Needle</th></tr></thead>
+      <tbody>
+        <tr><td>Title</td><td>30 chars</td><td>50 chars</td><td>Include primary keyword naturally. Do not keyword-stuff.</td></tr>
+        <tr><td>Subtitle / Short desc</td><td>30 chars</td><td>80 chars</td><td>Secondary keyword cluster + value proposition</td></tr>
+        <tr><td>Keyword field (iOS)</td><td>100 chars</td><td>N/A</td><td>No spaces before commas. Use competitors' names. No duplication with title.</td></tr>
+        <tr><td>Screenshots</td><td>First 3 shown in search</td><td>First 3 shown</td><td>First screenshot must show core action or value, not a splash screen</td></tr>
+        <tr><td>Icon</td><td>No text</td><td>No text</td><td>Single dominant color, single recognizable shape. Test in grayscale.</td></tr>
+        <tr><td>Ratings</td><td>Displayed in search</td><td>Displayed</td><td>&gt;4.4 required to not hurt CTR. Prompt after moment of delight, not on open.</td></tr>
+        <tr><td>Category</td><td>2 categories</td><td>1 category</td><td>Pick secondary category with less competition if primary is saturated</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>ASO research</td><td>Sensor Tower, AppTweak, MobileAction, AppFollow</td></tr>
+        <tr><td>A/B testing storelisting</td><td>StoreMaven, SplitMetrics, Google Play Experiments</td></tr>
+        <tr><td>Reviews management</td><td>AppFollow, Apptentive</td></tr>
+        <tr><td>Localization</td><td>Lokalise, Phrase</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Find Your Growth Strategy ↗</a></div>
+
+  <div class="part-head" id="s4">
+    <span class="part-tag">Session 4 · 90 min</span>
+    <h2>Build the Engine — Retention &amp; Monetization</h2>
+    <p class="desc">Retention is the truth test of whether your product creates value. All acquisition, all brand, all launch effort only compounds if users come back.</p>
+  </div>
+
+  <div class="subsec">
+    <div class="pq">"Retention. If you create value, they will come back. If they're not coming back, you're not creating value."<span class="ps">— Uri Levine, Co-founder of Waze</span></div>
+
+    <h3><span class="num">4.1</span> Retention &amp; Engagement</h3>
+
+    <h4>The Aha Moment</h4>
+    <p>The Aha Moment is the first time a new user experiences the core value of your product. Everything in onboarding should be engineered to deliver this moment as fast as possible.</p>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Product</th><th>Aha Moment</th><th>Time to Aha</th><th>How They Engineer It</th></tr></thead>
+      <tbody>
+        <tr class="hilite"><td>Slack</td><td>Send first message in a real channel</td><td>&lt; 5 min</td><td>Pre-populates workspace with sample channels and teammate profiles</td></tr>
+        <tr><td>Duolingo</td><td>Complete first lesson with correct answers</td><td>&lt; 3 min</td><td>First lesson is deliberately easy. Dopamine hit on completion is the hook.</td></tr>
+        <tr class="hilite"><td>Figma</td><td>Collaborate with a teammate on a design in real time</td><td>&lt; 10 min</td><td>Starter templates + automatic "invite collaborator" prompt</td></tr>
+        <tr><td>Notion</td><td>Transform a blank page into a structured workspace</td><td>&lt; 15 min</td><td>New user gets a template gallery on first open — skips the blank page problem</td></tr>
+        <tr class="hilite"><td>Dropbox</td><td>See a file appear on both devices</td><td>&lt; 5 min</td><td>Onboarding step: install desktop app + drag one file = magic</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="callout"><span class="clabel">Habit Formation Framework</span><strong>Trigger</strong> (external or internal cue) → <strong>Routine</strong> (the product action) → <strong>Reward</strong> (the value delivered). Duolingo's streak is a trigger. The lesson is the routine. The owl celebration is the reward. When users miss a day, the streak anxiety becomes an internal trigger. Design all three components intentionally.</div>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Spotify Discover Weekly: Personalization as Retention</div>
+      <p>Spotify had a retention problem in 2014 — users would listen for a while, then churn to YouTube or Pandora. Discover Weekly, launched in 2015, changed this. Every Monday, a playlist of 30 songs was generated specifically for each user based on listening history. The personalization was so good that users felt the product "knew them." More importantly, it gave users a reason to open Spotify every single Monday — a weekly engagement ritual. First month: 1.7M shares. After 10 weeks: 40M people had listened. Discover Weekly is now cited as the key inflection point in Spotify's retention and subscriber conversion.</p>
+      <div class="cs-lesson"><b>Lesson:</b> A personalized recurring ritual (weekly, daily, monthly) creates behavioral grooves that competitors cannot replicate without your data.</div>
+    </div>
+
+    <h4>Mounting Loss Design</h4>
+    <div class="callout soft"><span class="clabel">The Principle</span>"The product should get better the more you use it, and you'll have more to lose by leaving it." — Sarah Tavel. Examples: Notion (all your work is there), Spotify (music taste is mapped), Strava (workout history, friend network). Design features that accumulate value over time so the switching cost grows with usage.</div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>Behavioral analytics</td><td>Mixpanel, Amplitude, FullStory, Heap</td></tr>
+        <tr><td>Session recording</td><td>FullStory, Hotjar, Microsoft Clarity</td></tr>
+        <tr><td>In-app onboarding</td><td>Appcues, Intercom, Chameleon, Userpilot</td></tr>
+        <tr><td>Email automation</td><td>Customer.io, Braze, ActiveCampaign, Loops.so</td></tr>
+        <tr><td>AI retention</td><td>Gainsight, ChurnZero, Totango</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">4.2</span> Mobile Retention &amp; Monetization</h3>
+
+    <div class="vis-wrap">
+      <div class="vis-title">Mobile Retention Benchmarks by App Category</div>
+      <svg viewBox="0 0 820 195" xmlns="http://www.w3.org/2000/svg">
+        <line x1="60" y1="10" x2="60" y2="155" stroke="#E6E8EE" stroke-width="1"/>
+        <line x1="60" y1="155" x2="810" y2="155" stroke="#E6E8EE" stroke-width="1"/>
+        <text x="10" y="18" font-family="Inter" font-size="9" fill="#7A7F8A">50%</text>
+        <text x="10" y="60" font-family="Inter" font-size="9" fill="#7A7F8A">30%</text>
+        <text x="10" y="110" font-family="Inter" font-size="9" fill="#7A7F8A">10%</text>
+        <line x1="60" y1="15" x2="810" y2="15" stroke="#E6E8EE" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="60" y1="57" x2="810" y2="57" stroke="#E6E8EE" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="60" y1="107" x2="810" y2="107" stroke="#E6E8EE" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="125" y="172" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Casual Game</text>
+        <rect x="75" y="97" width="22" height="58" rx="4" fill="#264EF7"/>
+        <rect x="99" y="137" width="22" height="18" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <rect x="123" y="149" width="22" height="6" rx="3" fill="#264EF7" fill-opacity=".3"/>
+        <text x="86" y="92" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="600" fill="#0B0C10">30%</text>
+        <text x="245" y="172" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Mid-core Game</text>
+        <rect x="195" y="75" width="22" height="80" rx="4" fill="#264EF7"/>
+        <rect x="219" y="117" width="22" height="38" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <rect x="243" y="139" width="22" height="16" rx="3" fill="#264EF7" fill-opacity=".3"/>
+        <text x="206" y="70" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="600" fill="#0B0C10">40%</text>
+        <text x="365" y="172" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Utility App</text>
+        <rect x="315" y="105" width="22" height="50" rx="4" fill="#264EF7"/>
+        <rect x="339" y="131" width="22" height="24" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <rect x="363" y="145" width="22" height="10" rx="3" fill="#264EF7" fill-opacity=".3"/>
+        <text x="326" y="100" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="600" fill="#0B0C10">25%</text>
+        <text x="485" y="172" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Social App</text>
+        <rect x="435" y="85" width="22" height="70" rx="4" fill="#264EF7"/>
+        <rect x="459" y="121" width="22" height="34" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <rect x="483" y="139" width="22" height="16" rx="3" fill="#264EF7" fill-opacity=".3"/>
+        <text x="446" y="80" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="600" fill="#0B0C10">35%</text>
+        <text x="605" y="172" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Health/Fitness</text>
+        <rect x="555" y="99" width="22" height="56" rx="4" fill="#264EF7"/>
+        <rect x="579" y="127" width="22" height="28" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <rect x="603" y="143" width="22" height="12" rx="3" fill="#264EF7" fill-opacity=".3"/>
+        <text x="566" y="94" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="600" fill="#0B0C10">28%</text>
+        <text x="730" y="172" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Productivity</text>
+        <rect x="680" y="111" width="22" height="44" rx="4" fill="#264EF7"/>
+        <rect x="704" y="137" width="22" height="18" rx="4" fill="#264EF7" fill-opacity=".55"/>
+        <rect x="728" y="147" width="22" height="8" rx="3" fill="#264EF7" fill-opacity=".3"/>
+        <text x="691" y="106" text-anchor="middle" font-family="Space Grotesk" font-size="8" font-weight="600" fill="#0B0C10">22%</text>
+        <rect x="65" y="182" width="12" height="6" rx="2" fill="#264EF7"/>
+        <text x="81" y="189" font-family="Inter" font-size="9" fill="#7A7F8A">D1</text>
+        <rect x="105" y="182" width="12" height="6" rx="2" fill="#264EF7" fill-opacity=".55"/>
+        <text x="121" y="189" font-family="Inter" font-size="9" fill="#7A7F8A">D7</text>
+        <rect x="145" y="182" width="12" height="6" rx="2" fill="#264EF7" fill-opacity=".3"/>
+        <text x="161" y="189" font-family="Inter" font-size="9" fill="#7A7F8A">D30</text>
+      </svg>
+      <div class="vis-cap">Industry benchmark retention rates by app category. If your app falls below D7 benchmark, fix retention before scaling paid UA.</div>
+    </div>
+
+    <h4>Paywall &amp; Subscription Principles</h4>
+    <div class="week-grid">
+      <div class="week-box"><span class="wnum">Paywall Placement</span>Show the paywall after the user has experienced value — not at signup, not during onboarding. Duolingo waits until users fail a lesson to show the "no ads + unlimited lives" offer. The context creates desire.</div>
+      <div class="week-box"><span class="wnum">Annual vs Monthly</span>Annual plans should be positioned as the "smart choice" default, not the hidden option. Pricing anchoring: show monthly price first ($29/mo), then reveal annual ($159/yr = "Save 54%"). The comparison does the selling.</div>
+      <div class="week-box"><span class="wnum">Trial Design</span>7-day trials convert better than 14-day trials for impulse-buy products. Reverse trials (give premium free, downgrade to free) convert 2–3× better than upgrade from free. Users have to give something up, which activates loss aversion.</div>
+      <div class="week-box"><span class="wnum">Dunning Recovery</span>Failed payment sequence: Day 0 in-app banner, Day 3 email ("Update payment to save your data"), Day 7 email with offer ("6 months free if you stay"), Day 14 final. 15–30% of churned revenue recoverable with well-timed dunning.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>Subscription management</td><td>RevenueCat, Adapty, Apphud</td></tr>
+        <tr><td>Paywall A/B testing</td><td>RevenueCat Experiments, Adapty Paywall Builder</td></tr>
+        <tr><td>Push &amp; engagement</td><td>Braze, OneSignal, CleverTap</td></tr>
+        <tr><td>Review management</td><td>AppFollow, Apptentive</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3><span class="num">4.3</span> Community &amp; Ecosystem</h3>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Notion's 50% Ambassador Model</div>
+      <p>Notion created one of the most effective ambassador programs in tech history. Campus ambassadors received 50% of their referrals' first-year revenue. This wasn't charity — it was an acquisition channel with measurable CAC. Ambassadors were incentivized to be genuine advocates because their income depended on referred users actually staying. The program seeded Notion into over 500 universities before the company had a formal enterprise sales team. By the time enterprise buyers encountered Notion, their employees were already using it personally — making the sales conversation "we need the enterprise plan" rather than "let me convince you to try this."</p>
+      <div class="cs-lesson"><b>Lesson:</b> Revenue-sharing with ambassadors converts them from promoters to invested partners. The economics align when their earnings depend on retention, not just signups.</div>
+    </div>
+
+    <h3><span class="num">4.4</span> Partnerships &amp; BD</h3>
+
+    <div class="loop-card">
+      <div class="lclabel">5 BD Anti-Patterns to Avoid</div>
+      <ol>
+        <li><strong>Partnership as press release.</strong> Announce a partnership with no activation plan. Users never experience it. Lasts 6 weeks then dies.</li>
+        <li><strong>Equal effort assumption.</strong> Assuming the larger partner will promote as hard as you will. They won't. You need to run the activation.</li>
+        <li><strong>Integration without adoption.</strong> Building a Zapier integration that 12 people use. Integrations need their own go-to-market.</li>
+        <li><strong>VC as BD shortcut.</strong> Asking investors for intros before you have a clear ask, a working product, and proof of value. Burns the intro.</li>
+        <li><strong>Co-marketing with misaligned ICP.</strong> Partnering with a company that reaches a totally different buyer. All effort, no conversion.</li>
+      </ol>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>Partner management</td><td>PartnerStack, Impact, Crossbeam, Reveal</td></tr>
+        <tr><td>Affiliate programs</td><td>Impact, ShareASale, CJ Affiliate</td></tr>
+        <tr><td>Community platforms</td><td>Circle, Discord, Slack, Discourse</td></tr>
+        <tr><td>Events</td><td>Bevy, Hopin, Lu.ma</td></tr>
+        <tr><td>Community analytics</td><td>Orbit, Common Room</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://calendly.com/kissonlin/1-1-with-kisson" target="_blank" rel="noopener">Free Consultation with Growth Expert ↗</a></div>
+
+  <div class="part-head" id="s5">
+    <span class="part-tag">Session 5 · 45 min</span>
+    <h2>Compound the Moat — Fundraising</h2>
+    <p class="desc">Fundraising is a distribution problem, not a pitch problem. The company that gets funded is the one that makes investors feel they'll miss out if they pass — not the one with the most polished deck.</p>
+  </div>
+
+  <div class="subsec">
+    <div class="loop-card">
+      <div class="lclabel">Stage Criteria — What Investors Actually Need to See</div>
+      <div class="table-wrap" style="margin:8px 0 0"><table>
+        <thead><tr><th>Stage</th><th>Check Size</th><th>Must Have</th><th>Nice to Have</th></tr></thead>
+        <tbody>
+          <tr><td>Pre-seed</td><td>$250K–$2M</td><td>Founder-market fit, problem evidence, MVP or mockup</td><td>Early users, any revenue</td></tr>
+          <tr><td>Seed</td><td>$2M–$5M</td><td>PMF signal, 10–50 paying customers, clear ICP</td><td>MoM growth &gt;15%, NRR &gt;100%</td></tr>
+          <tr><td>Series A</td><td>$8M–$20M</td><td>Repeatable acquisition channel, $1M+ ARR, &lt;12mo CAC payback</td><td>NRR &gt;120%, expansion motion</td></tr>
+          <tr><td>Series B</td><td>$20M–$60M</td><td>Proven sales org, $5M+ ARR growing &gt;100% YoY, clear $1B+ market</td><td>International signal, enterprise logo</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <h4>Warm Intro Strategy</h4>
+    <p>Cold inbound to VCs has a &lt;1% meeting rate. Warm intros via mutual portfolio founders convert at 30–50%. The fastest path: identify which VCs have invested in companies that use your product → ask those founders for an intro → arrive with social proof already built in.</p>
+
+    <div class="case-card">
+      <div class="cs-badge">Case Study</div>
+      <div class="cs-title">Stripe: Selling the Inevitability Narrative</div>
+      <p>Stripe's 2010 pitch to investors wasn't "we're building a payment API." It was "the internet is going to eat commerce and no one has built the payment infrastructure for that world." Patrick Collison sold the inevitability of the market, not the features of the product. Investors who passed weren't saying no to Stripe — they were betting against the internet eating commerce. That frame made the pass feel much riskier than the investment. Stripe closed their seed round at a $20M valuation and are now valued at $65B+.</p>
+      <div class="cs-lesson"><b>Lesson:</b> The best pitches make investors feel that passing is the risk, not investing. Sell the inevitability of the world you're building for, not the product you have today.</div>
+    </div>
+
+    <div class="table-wrap"><table>
+      <thead><tr><th>Function</th><th>Tools</th></tr></thead>
+      <tbody>
+        <tr><td>Investor CRM</td><td>Affinity, DealCloud, Folk</td></tr>
+        <tr><td>Data room</td><td>Docsend, Notion, Google Drive</td></tr>
+        <tr><td>Pitch deck</td><td>Pitch, Beautiful.ai, Canva</td></tr>
+        <tr><td>Cap table</td><td>Carta, Pulley</td></tr>
+        <tr><td>Investor research</td><td>Crunchbase, PitchBook</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://calendly.com/kissonlin/1-1-with-kisson" target="_blank" rel="noopener">Free Consultation with Expert ↗</a></div>
+
+  <div class="part-head" id="s6">
+    <span class="part-tag">Session 6 · 120 min</span>
+    <h2>Client Playbooks — Master vs. Mediocre</h2>
+    <p class="desc">The difference between a good growth practitioner and a great one is not knowledge of frameworks — it's the specific moves, instincts, and non-obvious choices that separate dominant companies from the average. This session is about those moves.</p>
+  </div>
+
+  <div class="subsec" style="padding-bottom:8px">
+    <div class="callout"><span class="clabel">How to Use This Section</span>Each playbook covers: (1) The primary growth loop, (2) Master vs. Mediocre comparison — the exact behaviors that separate top-quartile companies from average ones, (3) 6 pro tips that masters use, (4) Key metrics with benchmarks, and (5) A deep case study breakdown.</div>
+  </div>
+
+  <div class="part-head" id="s6a">
+    <span class="part-tag">Playbook 6A</span>
+    <h2>Tech SaaS <span class="session-tag">PLG + PLS</span></h2>
+  </div>
+  <div class="subsec">
+    <div class="vis-wrap">
+      <div class="vis-title">Tech SaaS Primary Growth Loop</div>
+      <svg viewBox="0 0 820 110" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#264EF7"/></marker></defs>
+        <rect x="10" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="75" y="56" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Free Signup</text>
+        <text x="75" y="69" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Self-serve</text>
+        <line x1="140" y1="52" x2="168" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a1)"/>
+        <rect x="170" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="235" y="56" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Aha Moment</text>
+        <text x="235" y="69" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">&lt;90 seconds</text>
+        <line x1="300" y1="52" x2="328" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a1)"/>
+        <rect x="330" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="395" y="56" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Share / Invite</text>
+        <text x="395" y="69" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Virality embedded</text>
+        <line x1="460" y1="52" x2="488" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a1)"/>
+        <rect x="490" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="555" y="56" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">PQL Signal</text>
+        <text x="555" y="69" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Usage triggers sales</text>
+        <line x1="620" y1="52" x2="648" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a1)"/>
+        <rect x="650" y="30" width="158" height="44" rx="8" fill="rgba(38,78,247,.14)" stroke="#264EF7" stroke-opacity=".4" stroke-width="1.5"/>
+        <text x="729" y="56" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="#0B0C10" font-weight="700">Expand ARR</text>
+        <text x="729" y="69" text-anchor="middle" font-family="Inter" font-size="9" fill="#3C3F46">NRR &gt;120%</text>
+        <path d="M 729,74 C 729,95 75,95 75,74" stroke="#264EF7" stroke-opacity=".35" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#a1)"/>
+        <text x="400" y="105" text-anchor="middle" font-family="Inter" font-size="8" fill="#7A7F8A">Case studies + integration ecosystem drives new signups</text>
+      </svg>
+    </div>
+
+    <div class="compare-chart">
+      <div class="cc-cap">Key Differentiator — Net Revenue Retention</div>
+      <div class="cc-row"><div class="cc-label">Mediocre operator</div><div class="cc-bar"><div class="cc-fill" style="width:65%;background:var(--blue);opacity:.3"></div></div><div class="cc-val">90–105%</div></div>
+      <div class="cc-row"><div class="cc-label">Master operator</div><div class="cc-bar"><div class="cc-fill" style="width:93%;background:var(--blue)"></div></div><div class="cc-val">120–140%</div></div>
+    </div>
+
+    <div class="mvc-wrap"><table class="mvc-table">
+      <thead><tr><th class="mvc-area">Area</th><th class="mvc-mediocre">Mediocre</th><th class="mvc-master">Master</th></tr></thead>
+      <tbody>
+        <tr><td class="mvc-area">Aha Moment</td><td class="mvc-mediocre">Guided feature tour. User knows what exists but hasn't experienced value. Time-to-Aha: 5–15 minutes or never.</td><td class="mvc-master">Eliminates every step between signup and first value. Notion auto-populates a workspace. Calendly pre-fills times. Target &lt;90 seconds. Every extra click tested and removed.</td></tr>
+        <tr><td class="mvc-area">Virality Mechanics</td><td class="mvc-mediocre">"Share with a friend" button buried in settings. Referrals only when users remember to share.</td><td class="mvc-master">Virality in core product action. Loom watermark on every video. Figma: "invite collaborator" required to work together. Calendly: "Scheduling powered by Calendly" on every booking. Every share is passive marketing.</td></tr>
+        <tr><td class="mvc-area">PLS Motion</td><td class="mvc-mediocre">Sales reaches out after 14 days of inactivity. Misses peak intent. CAC payback: 24+ months.</td><td class="mvc-master">PQL fires on high-intent signal: pricing page 3× in 7 days, 5 teammates invited, free tier ceiling hit. SDR outreach within 4 hours. CAC payback: &lt;9 months.</td></tr>
+        <tr><td class="mvc-area">Integration Ecosystem</td><td class="mvc-mediocre">2–3 native integrations. Zapier added when users ask. No partner ecosystem strategy.</td><td class="mvc-master">Integration marketplace with 100+ partners, each a distribution channel. Notion: 150+. HubSpot App Marketplace: 1,400+. Each integration gets its own GTM plan.</td></tr>
+        <tr><td class="mvc-area">Trial-to-Paid</td><td class="mvc-mediocre">14-day trial, upgrade button in corner, 1 reminder email. Converts at 3–5%.</td><td class="mvc-master">Reverse trial: everyone starts on paid, downgrades after 14 days if no upgrade. Loss aversion drives 15–25% conversion. Usage-based nudges, not calendar nudges.</td></tr>
+        <tr><td class="mvc-area">NRR Optimization</td><td class="mvc-mediocre">Annual renewals managed manually. Expansion starts at Day 330. NRR: 90–105%.</td><td class="mvc-master">Proactive seat expansion triggered by usage spike. Automated offer at 80% of usage limit. Quarterly business reviews for accounts &gt;$10K. NRR: 120–140%.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="pro-tips">
+      <div class="pro-tip"><div class="pt-num">01</div><div><strong>Instrument the Aha Moment first.</strong> Measure time-to-first-core-action for new signups. Median TTAha &gt;5 min means fixing this beats any acquisition experiment.</div></div>
+      <div class="pro-tip"><div class="pt-num">02</div><div><strong>Build integrations before users know they need them.</strong> Slack's GitHub + Jira + Google Drive integrations made Slack stickier. Each reduces substitutability by one competitor.</div></div>
+      <div class="pro-tip"><div class="pt-num">03</div><div><strong>Engineer the PQL alert like a fire alarm.</strong> Best SDRs respond to PQL pings within 4 hours. Route PQLs to your top 20% performers only. Never let high-intent signals age.</div></div>
+      <div class="pro-tip"><div class="pt-num">04</div><div><strong>Price at the point of value realization.</strong> Charge per seat, per usage unit, per output — never for access alone. Slack: per active user. AWS: per GB. Loom: per video. Align pricing with felt ROI.</div></div>
+      <div class="pro-tip"><div class="pt-num">05</div><div><strong>The template gallery is the growth engine.</strong> Notion's 1M+ community templates are free acquisition. Every template page ranks on Google. Every shared template creates a signup. Enable power users to build and share.</div></div>
+      <div class="pro-tip"><div class="pt-num">06</div><div><strong>Developer advocacy is B2B word of mouth.</strong> Great docs, CLI tools, and code samples turn developers into external advocates. Linear, Stripe, Supabase built half their growth via developers who didn't work for them.</div></div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Deep Case Study</div>
+      <div class="cs-title">Figma: From Design Tool to $20B Category Creator</div>
+      <p>Figma entered a market dominated by Adobe and Sketch and won with four master moves. <strong>Browser-native:</strong> Every other design tool was desktop-only. Figma worked in the browser — a share link let anyone view in real time, turning every design file into a live demo. <strong>Real-time collaboration:</strong> Google Docs had normalized collaborative editing; Figma brought it to design, making the product essential for reviews, stakeholder feedback, and developer handoffs. <strong>Free tier for students:</strong> Figma seeded 500+ universities. Students graduated and brought it into their companies. Enterprise conversations started with "we're already using this." <strong>FigJam + plugins:</strong> Expansion to whiteboarding + plugin marketplace made Figma the platform for design workflows. Adobe's $20B acquisition offer (blocked by regulators) confirmed the platform valuation.</p>
+      <div class="cs-lesson"><b>Master move:</b> Didn't fight Adobe's distribution — bypassed it by going browser-native and seeding through individual designers who had no purchasing power but enormous influence over their employers' tool decisions.</div>
+    </div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Try MegaHit for Free ↗</a></div>
+
+  <div class="part-head" id="s6b">
+    <span class="part-tag">Playbook 6B</span>
+    <h2>B2B / Enterprise <span class="session-tag">SLG + ABM</span></h2>
+  </div>
+  <div class="subsec">
+    <div class="vis-wrap">
+      <div class="vis-title">B2B Enterprise Growth Loop</div>
+      <svg viewBox="0 0 820 110" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#264EF7"/></marker></defs>
+        <rect x="10" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="75" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">ICP Account</text>
+        <text x="75" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">ABM target list</text>
+        <line x1="140" y1="52" x2="168" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a2)"/>
+        <rect x="170" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="235" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Multi-touch</text>
+        <text x="235" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Outbound + content + ads</text>
+        <line x1="300" y1="52" x2="328" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a2)"/>
+        <rect x="330" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="395" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Champion</text>
+        <text x="395" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Internal sponsor found</text>
+        <line x1="460" y1="52" x2="488" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a2)"/>
+        <rect x="490" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="555" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Closed + Live</text>
+        <text x="555" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">CS starts day 1</text>
+        <line x1="620" y1="52" x2="648" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a2)"/>
+        <rect x="650" y="30" width="160" height="44" rx="8" fill="rgba(38,78,247,.14)" stroke="#264EF7" stroke-opacity=".4" stroke-width="1.5"/>
+        <text x="730" y="52" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="#0B0C10" font-weight="700">Case Study</text>
+        <text x="730" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#3C3F46">New pipeline</text>
+        <path d="M 730,74 C 730,95 75,95 75,74" stroke="#264EF7" stroke-opacity=".35" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#a2)"/>
+        <text x="400" y="105" text-anchor="middle" font-family="Inter" font-size="8" fill="#7A7F8A">Customer logo + ROI stat drives new ICP accounts into pipeline</text>
+      </svg>
+    </div>
+
+    <div class="mvc-wrap"><table class="mvc-table">
+      <thead><tr><th class="mvc-area">Area</th><th class="mvc-mediocre">Mediocre</th><th class="mvc-master">Master</th></tr></thead>
+      <tbody>
+        <tr><td class="mvc-area">Outbound</td><td class="mvc-mediocre">Mail-merge with {FirstName} and {Company}. Same cold email to 1,000 contacts. 1–2% reply rate. SDRs spend 70% on sequences.</td><td class="mvc-master">Clay enrichment: pulls recent LinkedIn post, company news, tech stack, hiring signals to generate 1 specific observation per prospect. Reply rates 8–15%. SDRs spend 70% on calls, not research.</td></tr>
+        <tr><td class="mvc-area">ABM Selection</td><td class="mvc-mediocre">ICP = "mid-market SaaS." 300 accounts with identical treatment, selected by headcount from ZoomInfo.</td><td class="mvc-master">Tier 1 (30 accounts): white-glove, custom research, exec outreach. Tier 2 (150): programmatic ABM. Tier 3 (1,000): inbound. Tier 1 criteria: funded last 6 months + tech stack signal + 50–500 employees.</td></tr>
+        <tr><td class="mvc-area">Champion Enablement</td><td class="mvc-mediocre">Delivers 40-slide deck for champion to forward. Champion can't explain ROI. Deal dies in committee.</td><td class="mvc-master">Champion toolkit: (1) 1-page exec summary with company-specific ROI numbers, (2) comparison vs. status quo, (3) "How to present to CFO" talking points, (4) reference customer at a similar company willing to take a call.</td></tr>
+        <tr><td class="mvc-area">Customer Success</td><td class="mvc-mediocre">CS checks in at 30/60/90 days. Renewal conversation at Day 330. No expansion motion. NRR: 95%.</td><td class="mvc-master">CS monitors usage continuously. Expansion triggered by usage signals, not calendar. QBRs with exec sponsor, not just champion. Proactive risk flag when usage drops 20% WoW. NRR: 120–130%.</td></tr>
+        <tr><td class="mvc-area">Case Studies</td><td class="mvc-mediocre">"We helped CompanyX improve efficiency." Vague, generic, published 6 months after the win.</td><td class="mvc-master">"How CompanyX cut pipeline time from 14 days to 3 hours, saving $840K." Published in 30 days. 5 formats: 1-pager, long-form, slide, video testimonial, quote card. Used in outbound for same vertical.</td></tr>
+        <tr><td class="mvc-area">Competitive Intel</td><td class="mvc-mediocre">Sales team guesses at objections. No battlecard. Loses 30% of deals to competitors never anticipated.</td><td class="mvc-master">Win/loss analysis quarterly. Battlecard per competitor updated monthly. When Competitor X is mentioned: 3 objection responses, 2 switch customers, 1 comparison table. Wins 60%+ of competitive deals.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="pro-tips">
+      <div class="pro-tip"><div class="pt-num">01</div><div><strong>The CFO is always in the room.</strong> Every champion justifies spend to finance. Build ROI calculators that auto-generate a 1-page financial summary: payback period, productivity gain, cost of doing nothing. Champions will use it without being asked.</div></div>
+      <div class="pro-tip"><div class="pt-num">02</div><div><strong>Trigger-based outreach beats cadence-based 5:1.</strong> Don't reach out on "Day 1 of sequence." Reach out when they raise a Series B, post a job your product replaces, or their competitor just became your customer.</div></div>
+      <div class="pro-tip"><div class="pt-num">03</div><div><strong>Best CS reps don't sell — they surface value.</strong> Train CS to ask: "Since implementing X, what else has become a problem?" The next contract expands itself when asked at the right moment.</div></div>
+      <div class="pro-tip"><div class="pt-num">04</div><div><strong>Certify implementation partners.</strong> For products requiring significant setup, certify consultants who sell implementation and refer software. Salesforce's partner ecosystem generates 70%+ of revenue. Start building yours at 50 customers.</div></div>
+      <div class="pro-tip"><div class="pt-num">05</div><div><strong>Mutual action plans close deals 40% faster.</strong> After every demo: co-write a doc showing who does what by when. Gong data: deals with a MAP close 40% faster. Mutual commitment eliminates ghosting.</div></div>
+      <div class="pro-tip"><div class="pt-num">06</div><div><strong>G2 reviews compound like SEO.</strong> A G2 category leader appears in every research process before a sales call. Run quarterly G2 campaigns: email best customers, 2 clicks to review, gift card as thank-you. 200+ reviews in 6 months is achievable.</div></div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Deep Case Study</div>
+      <div class="cs-title">Gong: Revenue Intelligence Category Creation</div>
+      <p>Gong didn't sell a "sales tool" — they created the "Revenue Intelligence" category. By naming a new category, they became its default leader and defined evaluation criteria to favor their strengths. <strong>Data flywheel:</strong> Product improves with each conversation analyzed. More customers = better AI = better product = more customers. <strong>Benchmark reports:</strong> Gong publishes research using proprietary data ("What separates top 1% salespeople"). These generate earned media, establish authority, and require Gong's product to access. <strong>Pre-suasion:</strong> Every prospect had seen a Gong insight about their own buying behavior before the sales call. The demo was done before the AE arrived. Gong reached $7.25B valuation in 2021 off a data-driven, thought-leadership engine with no scaled paid UA.</p>
+      <div class="cs-lesson"><b>Master move:</b> Created the category name, defined criteria to favor their strengths, published data making those criteria feel objective. Competitors were forced to fight on Gong's turf.</div>
+    </div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Try MegaHit for Free ↗</a></div>
+
+  <div class="part-head" id="s6c">
+    <span class="part-tag">Playbook 6C</span>
+    <h2>B2C Consumer Apps <span class="session-tag">PLG + Habit</span></h2>
+  </div>
+  <div class="subsec">
+    <div class="vis-wrap">
+      <div class="vis-title">B2C Consumer Growth Loop</div>
+      <svg viewBox="0 0 820 110" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#07EDD8"/></marker></defs>
+        <rect x="10" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="75" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Acquire</text>
+        <text x="75" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Organic + paid + UGC</text>
+        <line x1="140" y1="52" x2="168" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a3)"/>
+        <rect x="170" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="235" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Aha Moment</text>
+        <text x="235" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">First session, &lt;3 min</text>
+        <line x1="300" y1="52" x2="328" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a3)"/>
+        <rect x="330" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="395" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Habit Formation</text>
+        <text x="395" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Streak, social, reward</text>
+        <line x1="460" y1="52" x2="488" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a3)"/>
+        <rect x="490" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="555" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Convert to Paid</text>
+        <text x="555" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Reverse trial / paywall</text>
+        <line x1="620" y1="52" x2="648" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a3)"/>
+        <rect x="650" y="30" width="160" height="44" rx="8" fill="rgba(7,237,216,.14)" stroke="#07EDD8" stroke-opacity=".5" stroke-width="1.5"/>
+        <text x="730" y="52" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="#0B0C10" font-weight="700">Share &amp; Refer</text>
+        <text x="730" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#0B0C10">New users</text>
+        <path d="M 730,74 C 730,95 75,95 75,74" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#a3)"/>
+        <text x="400" y="105" text-anchor="middle" font-family="Inter" font-size="8" fill="#7A7F8A">Social shares + UGC + referral program drives new users at near-zero CAC</text>
+      </svg>
+    </div>
+
+    <div class="mvc-wrap"><table class="mvc-table">
+      <thead><tr><th class="mvc-area">Area</th><th class="mvc-mediocre">Mediocre</th><th class="mvc-master">Master</th></tr></thead>
+      <tbody>
+        <tr><td class="mvc-area">Onboarding Speed</td><td class="mvc-mediocre">5-step signup before seeing the product. Email verification required. Tutorial is 3 minutes long. Loses 60% before Aha Moment.</td><td class="mvc-master">Duolingo: signup optional, first lesson starts immediately. Aha in under 3 minutes. Account creation asked after value is experienced. Registration friction near zero.</td></tr>
+        <tr><td class="mvc-area">Habit Loop</td><td class="mvc-mediocre">Generic "come back" push at 9am. No personalization. Opened 2–3% of the time. Ignored after week 2.</td><td class="mvc-master">Push sent at exact time user historically opens the app. Content personalized to streak state. Duolingo's owl turns red when streak is at risk — anxiety, not just reminder. Opens at 15–20%.</td></tr>
+        <tr><td class="mvc-area">TikTok / Social</td><td class="mvc-mediocre">Reposts Instagram content to TikTok. 3,000 views. No creator partnerships. No comment strategy.</td><td class="mvc-master">Duolingo hires a dedicated TikTok creator. "Unhinged Duo owl" persona is distinct from all other channels. Videos answer real TikTok search queries. 7M+ followers. Viral moments monthly.</td></tr>
+        <tr><td class="mvc-area">Referral Design</td><td class="mvc-mediocre">"Give $10, get $10" buried in settings. Discovered by 0.5% of users. Zero incremental acquisition.</td><td class="mvc-master">Referral embedded in product moments. Strava: sharing a run creates a beautiful Instagram Stories card — the share IS the product. Wordle: colored grid shares are the entire distribution model. 10M+ daily actives, zero paid marketing.</td></tr>
+        <tr><td class="mvc-area">Paywall Timing</td><td class="mvc-mediocre">Paywall at signup. User hasn't experienced value. 98% close it. Revenue per install: $0.20.</td><td class="mvc-master">Paywall at moment of highest desire: after failing a premium feature, hitting streak milestone, seeing behind the lock. Duolingo: paywall when user runs out of hearts mid-lesson. Conversion 5× higher. Revenue per install: $1.20+.</td></tr>
+        <tr><td class="mvc-area">Shareable UGC</td><td class="mvc-mediocre">Testimonials collected annually. Staged photos. No UGC strategy. Relies entirely on paid ads.</td><td class="mvc-master">Spotify Wrapped, Wordle grid, MyFitnessPal streak badge — outputs users share because they reflect personally on the user. The shareable output IS the marketing. UGC drives 30%+ of new installs.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="pro-tips">
+      <div class="pro-tip"><div class="pt-num">01</div><div><strong>Onboarding friction destroys revenue.</strong> Every extra field costs users who would have paid. Measure drop-off at each step. &gt;20% drop between any two steps = that step is broken. Cut until you can't.</div></div>
+      <div class="pro-tip"><div class="pt-num">02</div><div><strong>TikTok is a search engine, not a broadcast channel.</strong> Search "how to learn Spanish" on TikTok — millions of results with purchase intent. Post 3 search-optimized videos per week for 90 days before judging results.</div></div>
+      <div class="pro-tip"><div class="pt-num">03</div><div><strong>The streak is loss aversion, not reward.</strong> A 50-day Duolingo streak motivates because users are terrified of losing 50 days, not because they want 51. Design mechanics that make users afraid of stopping.</div></div>
+      <div class="pro-tip"><div class="pt-num">04</div><div><strong>UGC hooks: achievement, comparison, transformation.</strong> Spotify Wrapped (achievement). BeReal (authentic moment). "6 months on Hinge" (transformation). Engineer the shareable output, not just the share button.</div></div>
+      <div class="pro-tip"><div class="pt-num">05</div><div><strong>D1 retention is the only metric that matters in weeks 1–8.</strong> If D1 &lt;30%, nothing compounds. D1 is fixed in onboarding. Fix onboarding before touching any other metric.</div></div>
+      <div class="pro-tip"><div class="pt-num">06</div><div><strong>Variable rewards retain better than fixed.</strong> Slot machines beat vending machines for engagement. Duolingo's gem amounts are variable. Build randomness into reward signals (within ethical limits).</div></div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Deep Case Study</div>
+      <div class="cs-title">Duolingo: 10M to 500M Users Without Scaled Paid UA</div>
+      <p>Duolingo grew from 10M to 500M registered users without a traditional paid UA budget. <strong>Streak mechanics:</strong> The streak creates loss aversion that brings 40M daily actives back every 24 hours. The streak freeze (paying to protect a streak) was one of their highest-converting in-app purchases — users buying relief from anxiety, not a feature. <strong>TikTok:</strong> Zaria Parvez was given creative freedom to portray Duo as unhinged and obsessive. The account hit 1M followers in 9 months. Each viral video worth millions in equivalent ad spend. <strong>Shareability:</strong> Every achievement generates a shareable card. Users share because it reflects on them personally, not because Duolingo incentivizes it. 30%+ of new installs are organic shares. <strong>Freemium as distribution:</strong> Only 7% of users pay, but the 93% on free generate data to improve AI, social proof for marketing, and organic referrals. The free tier is the distribution engine.</p>
+      <div class="cs-lesson"><b>Master move:</b> Built streak anxiety that generates more daily usage than any notification strategy, then made that usage visible and shareable so power users market the product for free.</div>
+    </div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Try MegaHit for Free ↗</a></div>
+
+  <div class="part-head" id="s6d">
+    <span class="part-tag">Playbook 6D</span>
+    <h2>E-Commerce <span class="session-tag">DTC + Retention</span></h2>
+  </div>
+  <div class="subsec">
+    <div class="vis-wrap">
+      <div class="vis-title">E-Commerce Growth Loop</div>
+      <svg viewBox="0 0 820 110" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="a4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#264EF7"/></marker></defs>
+        <rect x="10" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="75" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Paid Acquisition</text>
+        <text x="75" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Meta, TikTok, Google</text>
+        <line x1="140" y1="52" x2="168" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a4)"/>
+        <rect x="170" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="235" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">First Purchase</text>
+        <text x="235" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">CVR optimization</text>
+        <line x1="300" y1="52" x2="328" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a4)"/>
+        <rect x="330" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="395" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Post-Purchase</text>
+        <text x="395" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Email flow + upsell</text>
+        <line x1="460" y1="52" x2="488" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a4)"/>
+        <rect x="490" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="555" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">2nd Purchase</text>
+        <text x="555" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">LTV unlocked</text>
+        <line x1="620" y1="52" x2="648" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a4)"/>
+        <rect x="650" y="30" width="160" height="44" rx="8" fill="rgba(38,78,247,.14)" stroke="#264EF7" stroke-opacity=".4" stroke-width="1.5"/>
+        <text x="730" y="52" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="#0B0C10" font-weight="700">UGC + Refer</text>
+        <text x="730" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#0B0C10">Lower CAC</text>
+        <path d="M 730,74 C 730,95 75,95 75,74" stroke="#264EF7" stroke-opacity=".35" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#a4)"/>
+        <text x="400" y="105" text-anchor="middle" font-family="Inter" font-size="8" fill="#7A7F8A">UGC + word-of-mouth reduces blended CAC over time</text>
+      </svg>
+    </div>
+
+    <div class="compare-chart">
+      <div class="cc-cap">Key Differentiator — 12-Month Customer LTV Multiplier</div>
+      <div class="cc-row"><div class="cc-label">Mediocre operator</div><div class="cc-bar"><div class="cc-fill" style="width:24%;background:var(--blue);opacity:.3"></div></div><div class="cc-val">1.2× first order</div></div>
+      <div class="cc-row"><div class="cc-label">Master operator</div><div class="cc-bar"><div class="cc-fill" style="width:100%;background:var(--blue)"></div></div><div class="cc-val">3–5× first order</div></div>
+    </div>
+
+    <div class="mvc-wrap"><table class="mvc-table">
+      <thead><tr><th class="mvc-area">Area</th><th class="mvc-mediocre">Mediocre</th><th class="mvc-master">Master</th></tr></thead>
+      <tbody>
+        <tr><td class="mvc-area">Email / SMS Automation</td><td class="mvc-mediocre">Welcome email + abandoned cart email. 2 flows total. Klaviyo open rate 18%. Revenue from email: 10% of total.</td><td class="mvc-master">20+ behavioral Klaviyo flows: welcome, browse abandon, cart abandon, post-purchase (D1, D7, D30), win-back (D60, D90, D180), VIP tier upgrade, birthday, back-in-stock, replenishment. Email drives 30–40% of total revenue.</td></tr>
+        <tr><td class="mvc-area">Post-Purchase Sequence</td><td class="mvc-mediocre">Order confirmation email + shipping update. No revenue extraction after purchase. Waits for the customer to come back on their own.</td><td class="mvc-master">Day 0: order confirmation + "while you wait" cross-sell. Day 3: shipping update + how-to content. Day 7: review request + photo request for UGC. Day 14: complementary product email. Day 30: loyalty program invite + "you might be running low" replenishment nudge.</td></tr>
+        <tr><td class="mvc-area">Paid Creative Strategy</td><td class="mvc-mediocre">Runs 2–3 ad creatives per campaign. Scales budget on creative before it's proven. Kills creatives based on "I don't like it" not data. ROAS: 1.5–2.5x.</td><td class="mvc-master">Tests 20–30 creative concepts per month with structured hypothesis (format × hook × audience). Kill threshold: $50 spend with &lt;1% CTR. Scale threshold: profitable at $500 spend. Top 20% of creatives generate 80% of revenue. Creative lab is a continuous production machine. ROAS: 3–5x.</td></tr>
+        <tr><td class="mvc-area">Subscription / LTV</td><td class="mvc-mediocre">One-time purchase default. Subscription available but not promoted. Customer LTV after 12 months: 1.2x first-order value.</td><td class="mvc-master">Subscription as default option, presented before one-time purchase. Subscriber-exclusive products and pricing. Cancel flow that offers pause, discount, or swap instead of immediate cancel. LTV after 12 months: 3–5x first-order value.</td></tr>
+        <tr><td class="mvc-area">Attribution</td><td class="mvc-mediocre">Runs on Meta/Google platform attribution. Sees Meta ROAS at 4x, Google at 3x, assumes combined performance is great. Scales both. Actual blended ROAS: 1.8x.</td><td class="mvc-master">Triple Whale or Northbeam for multi-touch attribution. Knows true blended CAC across all channels. Media mix modeling for channels without pixel (podcast, OOH, influencer). Makes budget decisions on actual payback, not platform-reported ROAS.</td></tr>
+        <tr><td class="mvc-area">UGC Strategy</td><td class="mvc-mediocre">Sends 5 PR packages to influencers. Waits for them to post. Gets 2 posts. No usage rights acquired. Can't run as paid ads.</td><td class="mvc-master">UGC brief to 50+ micro-creators monthly. 2 deliverables each (raw video + photo). Full usage rights acquired for 12 months. 80% used directly as paid ad creative. UGC integrated into PDPs (product pages) alongside professional photography. Average UGC ad outperforms studio creative 2.5x on CTR.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="pro-tips">
+      <div class="pro-tip"><div class="pt-num">01</div><div><strong>The second purchase is more valuable than the first.</strong> Customers who make a second purchase within 90 days have 4–5x the LTV of single-purchase customers. Build your entire post-purchase sequence around engineering that second transaction.</div></div>
+      <div class="pro-tip"><div class="pt-num">02</div><div><strong>Platform ROAS is a lie.</strong> Meta reports ROAS on the last click before purchase. It claims credit for customers who were already going to buy. Triple Whale / Northbeam shows you what actually drove the decision. Most brands find their true blended ROAS is 30–50% lower than platform reporting.</div></div>
+      <div class="pro-tip"><div class="pt-num">03</div><div><strong>UGC brief quality determines creative quality.</strong> Vague brief = vague content. Give creators: the exact hook to use, the problem to show, the product benefit to demonstrate, and examples of content that has worked before. UGC is a production process, not a hope-and-pray exercise.</div></div>
+      <div class="pro-tip"><div class="pt-num">04</div><div><strong>Win-back sequences are the highest-ROI email you can send.</strong> Lapsed customers (no purchase in 90+ days) who re-engage are 3x more likely to become long-term buyers than new customers. A 3-email win-back sequence with a 15% discount and urgency recovers 8–15% of lapsed base.</div></div>
+      <div class="pro-tip"><div class="pt-num">05</div><div><strong>Subscription default increases attach rate 3–5x.</strong> Default the purchase option to "Subscribe and Save" with monthly delivery. Most customers accept the default. The ones who actively choose one-time are fine — you've already maximized subscription attach rate on those who didn't decide.</div></div>
+      <div class="pro-tip"><div class="pt-num">06</div><div><strong>Your review collection timing is wrong.</strong> Don't ask for a review at Day 1 (product hasn't arrived). Don't ask at Day 3 (first impression only). Ask at Day 14 — the customer has used the product enough to have an informed opinion, and still has the positive new-purchase feeling.</div></div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Deep Case Study</div>
+      <div class="cs-title">Gymshark: From Bedroom Brand to $1.3B via Community + Creator</div>
+      <p>Gymshark was founded in 2012 by Ben Francis, a 19-year-old operating out of a garage. By 2020 they were valued at $1.3B. The entire growth engine was community and creator-led, with zero traditional retail distribution until years after launch. <strong>Creator strategy:</strong> Ben Francis identified 6 fitness YouTubers with dedicated audiences who weren't yet sponsoring fitness brands and sent them free kits. He didn't ask for posts. He just said "wear it if you like it." The organic posts generated Gymshark's first viral wave. By 2016 they had 50+ "Gymshark Athletes" who were genuine community members, not paid models. <strong>Gymshark pop-ups:</strong> Rather than opening stores, Gymshark ran pop-up "meet your athlete" events where fans could meet their favorite creators. These events generated UGC, sold out product, and built real-world community bonds. <strong>Limited drops:</strong> Seasonal limited-edition collections with countdown timers created genuine scarcity. Drop days saw website traffic spikes that crashed servers — free PR that amplified the next drop's hype. <strong>Community as product feedback:</strong> Gymshark ran private Facebook groups for their athlete community. Product feedback was real-time and genuine. New colorways and styles were community-influenced before launch.</p>
+      <div class="cs-lesson"><b>Master move:</b> Treated creators as community members, not billboards. Gave them product they genuinely wanted, let them post organically, and let the authenticity create trust that paid ads can never replicate.</div>
+    </div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Try MegaHit for Free ↗</a></div>
+
+  <div class="part-head" id="s6e">
+    <span class="part-tag">Playbook 6E</span>
+    <h2>Professional Services <span class="session-tag">Referral + Reputation</span></h2>
+  </div>
+  <div class="subsec">
+    <div class="vis-wrap">
+      <div class="vis-title">Professional Services Growth Loop</div>
+      <svg viewBox="0 0 820 110" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="a5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#264EF7"/></marker></defs>
+        <rect x="10" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="75" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Thought Leadership</text>
+        <text x="75" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Content + speaking</text>
+        <line x1="140" y1="52" x2="168" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a5)"/>
+        <rect x="170" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="235" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Inbound Lead</text>
+        <text x="235" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Already sold before call</text>
+        <line x1="300" y1="52" x2="328" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a5)"/>
+        <rect x="330" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="395" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Deliver Results</text>
+        <text x="395" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Client hero case</text>
+        <line x1="460" y1="52" x2="488" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a5)"/>
+        <rect x="490" y="30" width="130" height="44" rx="8" fill="rgba(38,78,247,.06)" stroke="#264EF7" stroke-opacity=".25" stroke-width="1"/>
+        <text x="555" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Referral Ask</text>
+        <text x="555" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">At moment of delight</text>
+        <line x1="620" y1="52" x2="648" y2="52" stroke="#264EF7" stroke-width="1.5" marker-end="url(#a5)"/>
+        <rect x="650" y="30" width="160" height="44" rx="8" fill="rgba(38,78,247,.14)" stroke="#264EF7" stroke-opacity=".4" stroke-width="1.5"/>
+        <text x="730" y="52" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="#0B0C10" font-weight="700">New Client</text>
+        <text x="730" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#3C3F46">Zero CAC</text>
+        <path d="M 730,74 C 730,95 75,95 75,74" stroke="#264EF7" stroke-opacity=".35" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#a5)"/>
+        <text x="400" y="105" text-anchor="middle" font-family="Inter" font-size="8" fill="#7A7F8A">Client case study becomes content — feeds thought leadership loop</text>
+      </svg>
+    </div>
+
+    <div class="mvc-wrap"><table class="mvc-table">
+      <thead><tr><th class="mvc-area">Area</th><th class="mvc-mediocre">Mediocre</th><th class="mvc-master">Master</th></tr></thead>
+      <tbody>
+        <tr><td class="mvc-area">Positioning</td><td class="mvc-mediocre">"We help businesses grow." Full-service agency. Generalist. Competes on price. Can't charge premium. Interchangeable with 100 others.</td><td class="mvc-master">Hyper-specialized: "We help Series A SaaS companies in fintech get their first 100 enterprise customers." Premium pricing because they're the only expert in that exact problem. April Dunford's principle: the riches are in the niches.</td></tr>
+        <tr><td class="mvc-area">Proprietary Framework</td><td class="mvc-mediocre">Delivers work via generic project management. No named methodology. Clients can't remember or recommend what was done because it has no name.</td><td class="mvc-master">Named proprietary framework. McKinsey 7S. BCG Matrix. GTM Partners' "Go-to-Market Fit" Model. The framework IS the brand. Clients can say "they use the X Method." The framework becomes a hiring signal ("do you know the X Method?"), which compounds reputation.</td></tr>
+        <tr><td class="mvc-area">Case Studies</td><td class="mvc-mediocre">"We helped Company X with their marketing." Vague results. Client is the vendor. No client quote on the outcome.</td><td class="mvc-master">Client-hero narrative: "CompanyX's CMO Sarah Chen explains how they achieved 3x pipeline in 6 months." Client is the protagonist. Firm is the guide. Includes specific metrics, named individuals, and challenges overcome. Published as 1,500-word article + 60-second video.</td></tr>
+        <tr><td class="mvc-area">Referral System</td><td class="mvc-mediocre">"If you know anyone who needs our help, let us know." Asked at end of every engagement. Gets 0–1 referrals per year.</td><td class="mvc-master">Structured referral ask at the exact moment of peak client delight (when a major milestone is hit). Provide 3 specific profiles of ideal clients so the referral conversation is easy. Follow up with "who in your network runs a company like [specific example]?" Referral introductions get 50%+ close rate.</td></tr>
+        <tr><td class="mvc-area">Thought Leadership</td><td class="mvc-mediocre">Posts "thought leadership" articles that are actually product brochures. Writes about their services. Gets 10 views per article.</td><td class="mvc-master">Publishes research, data, or opinion that the target buyer finds genuinely valuable — whether or not they ever hire. EY, Deloitte, McKinsey publish reports that CFOs read because the data is useful, not because they want to buy consulting. The research creates a reason to be in the same conversation.</td></tr>
+        <tr><td class="mvc-area">Network Leverage</td><td class="mvc-mediocre">Attends 3 industry conferences per year. Has a booth. Collects business cards. Gets 1–2 leads per event. ROI unclear.</td><td class="mvc-master">Speaks at conferences instead of exhibiting. Speaking = authority signal + 45-minute pitch to the entire audience. Hosts intimate dinners for 10 target buyers at the same conference. 10x better networking ROI than a booth. Investment: speaker training + 2 hours of dinner per event.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="pro-tips">
+      <div class="pro-tip"><div class="pt-num">01</div><div><strong>Niche down until it hurts, then niche down more.</strong> "We help SaaS companies" is too broad. "We help B2B SaaS companies with 10–50 person sales teams close their first enterprise deal" is a category. Be the only option, not the best option among many.</div></div>
+      <div class="pro-tip"><div class="pt-num">02</div><div><strong>Name your methodology.</strong> Unnamed work is forgettable. "We did a strategic review" gets no referrals. "We ran our Revenue Acceleration Sprint" gets passed around. The name is a referral handle. Invent it today if you don't have one.</div></div>
+      <div class="pro-tip"><div class="pt-num">03</div><div><strong>The referral ask has a timing problem.</strong> Asking at the end of an engagement is too late — the emotional peak has passed. Ask 2 weeks after the client's biggest win. That's when they're most enthusiastic and most likely to advocate.</div></div>
+      <div class="pro-tip"><div class="pt-num">04</div><div><strong>Publish one insight per week, not one article per quarter.</strong> LinkedIn rewards consistent posting with distribution. One 200-word insight per week from the firm's principals builds more audience in 6 months than one 2,000-word article per quarter.</div></div>
+      <div class="pro-tip"><div class="pt-num">05</div><div><strong>Anchor pricing on value, not hours.</strong> "This engagement will increase your pipeline by $2M. Our fee is $50K." That's a 40x ROI conversation. "We charge $250/hour for 200 hours" is a cost conversation. Reframe all proposals to value-based pricing immediately.</div></div>
+      <div class="pro-tip"><div class="pt-num">06</div><div><strong>The best salespeople in professional services are past clients.</strong> A 30-minute reference call from a happy past client closes more deals than a 3-hour sales process. Invest in keeping past clients happy even after the engagement ends — quarterly check-ins, sending relevant articles. They are your sales team.</div></div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Deep Case Study</div>
+      <div class="cs-title">McKinsey: How a Consulting Firm Built an Unassailable Brand Moat</div>
+      <p>McKinsey is one of the world's most recognized brand names in B2B despite spending essentially nothing on traditional advertising. Their entire brand was built on three compounding assets. <strong>Framework ownership:</strong> McKinsey's 7S Framework, GE-McKinsey Matrix, and "Three Horizons of Innovation" are taught in business schools globally. Every MBA who learns the framework thinks of McKinsey when they need strategy consulting. The educational content IS the sales funnel. <strong>Alumni network effect:</strong> McKinsey alumni become CEOs, CFOs, and board members at major companies — and then hire McKinsey. The investment in training junior consultants to an impossibly high standard creates clients 10–20 years later. <strong>Publishing as positioning:</strong> McKinsey Quarterly publishes research that CFOs and CEOs actually want to read. The research is free. The audience is every C-suite buyer in the world. The byline does the selling. McKinsey has never needed a sales team because their intellectual output arrives in buyers' inboxes before any sales conversation starts.</p>
+      <div class="cs-lesson"><b>Master move:</b> Invested in creating intellectual property (frameworks, research) that is genuinely useful to their buyers, who then associate McKinsey with the quality of the thinking before any engagement begins. The IP is the marketing budget.</div>
+    </div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Try MegaHit for Free ↗</a></div>
+
+  <div class="part-head" id="s6f">
+    <span class="part-tag">Playbook 6F</span>
+    <h2>Gaming <span class="session-tag">D1 Retention + Live Ops</span></h2>
+  </div>
+  <div class="subsec">
+    <div class="vis-wrap">
+      <div class="vis-title">Gaming Growth Loop</div>
+      <svg viewBox="0 0 820 110" xmlns="http://www.w3.org/2000/svg">
+        <defs><marker id="a6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#07EDD8"/></marker></defs>
+        <rect x="10" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="75" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">UA + Organic</text>
+        <text x="75" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Paid + streamer seeding</text>
+        <line x1="140" y1="52" x2="168" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a6)"/>
+        <rect x="170" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="235" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">D1 Retention</text>
+        <text x="235" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">New player experience</text>
+        <line x1="300" y1="52" x2="328" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a6)"/>
+        <rect x="330" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="395" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Core Loop Hook</text>
+        <text x="395" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">Mastery + reward loop</text>
+        <line x1="460" y1="52" x2="488" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a6)"/>
+        <rect x="490" y="30" width="130" height="44" rx="8" fill="rgba(7,237,216,.06)" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1"/>
+        <text x="555" y="52" text-anchor="middle" font-family="Inter" font-size="11" fill="#3C3F46" font-weight="600">Monetize</text>
+        <text x="555" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#7A7F8A">IAP + Battle Pass</text>
+        <line x1="620" y1="52" x2="648" y2="52" stroke="#07EDD8" stroke-width="1.5" marker-end="url(#a6)"/>
+        <rect x="650" y="30" width="160" height="44" rx="8" fill="rgba(7,237,216,.14)" stroke="#07EDD8" stroke-opacity=".5" stroke-width="1.5"/>
+        <text x="730" y="52" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="#0B0C10" font-weight="700">Share + Viral</text>
+        <text x="730" y="66" text-anchor="middle" font-family="Inter" font-size="9" fill="#3C3F46">Stream / clip / invite</text>
+        <path d="M 730,74 C 730,95 75,95 75,74" stroke="#07EDD8" stroke-opacity=".35" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#a6)"/>
+        <text x="400" y="105" text-anchor="middle" font-family="Inter" font-size="8" fill="#7A7F8A">Streamers + UGC clips + friend invites drive organic installs</text>
+      </svg>
+    </div>
+
+    <div class="mvc-wrap"><table class="mvc-table">
+      <thead><tr><th class="mvc-area">Area</th><th class="mvc-mediocre">Mediocre</th><th class="mvc-master">Master</th></tr></thead>
+      <tbody>
+        <tr><td class="mvc-area">Pre-Launch Seeding</td><td class="mvc-mediocre">Sends a press release to gaming journalists 1 week before launch. Gets 2 reviews. Posts a launch trailer on YouTube. Launch day downloads: 5,000.</td><td class="mvc-master">Identifies 10–20 micro-streamers (10K–100K audience) in the game's genre 3 months before launch. Seeds early access + exclusive content rights. Each creates authentic gameplay content before anyone else. Combined reach: 1M+ pre-launch. Launch day downloads: 100,000+.</td></tr>
+        <tr><td class="mvc-area">D1 Retention</td><td class="mvc-mediocre">Tutorial is the same for all players regardless of device, playstyle, or prior gaming experience. D1 retention: 20–25%. No dedicated new player team. D7 falls off a cliff.</td><td class="mvc-master">Dedicated "new player experience" team with D1 as their single KPI. Tutorial adapts to player behavior (slower for new gamers, faster for core gamers). D1 target: 40%+. Every D1 percentage point improvement = $X million incremental LTV when modeled across all installs.</td></tr>
+        <tr><td class="mvc-area">Live Ops Calendar</td><td class="mvc-mediocre">Ships content when it's ready. Seasonal events planned 2 weeks ahead. Team scrambles. Quality is inconsistent. Player engagement drops 30% in "quiet" months.</td><td class="mvc-master">Live Ops calendar planned 3–6 months ahead. Each month has an anchor event, a mid-month event, and weekly rewards. Clash Royale, Clash of Clans, and Pokemon GO plan their event calendars a year in advance. Events are tied to real-world moments (holidays, sports events) for PR amplification.</td></tr>
+        <tr><td class="mvc-area">Community Co-Development</td><td class="mvc-mediocre">Discord server managed by 1 community manager who posts announcements. Community feedback is read but not actioned. Players feel ignored.</td><td class="mvc-master">Community is a co-development partner. New features are beta-tested in the Discord before release. Top community members are given "Founding Member" titles and early access. When features are shipped based on community feedback, the announcement says "you asked, we built." Players become advocates.</td></tr>
+        <tr><td class="mvc-area">Monetization Design</td><td class="mvc-mediocre">Pay-to-win mechanics. Players who pay get advantages over free players. Short-term revenue spike. Long-term community destruction. Player reviews: 2.1 stars.</td><td class="mvc-master">Battle Pass as primary monetization: time-limited, cosmetics only, available to all players at $10. Fortnite Battle Pass generates $1B+ annually without pay-to-win. Whale monetization through cosmetic exclusives, not power advantages. Maintains fairness = maintains community = maintains LTV.</td></tr>
+        <tr><td class="mvc-area">Shareability Engineering</td><td class="mvc-mediocre">Share button in settings. Gets 100 organic posts per month. Game is fun but not designed to be shown to others.</td><td class="mvc-master">Wordle: the colored grid share IS the social mechanic. Among Us: "I was the Impostor" is designed to be shared. Clip-worthy moments are engineered — spectacular fails, rare drops, PvP victories. The social content moment is a game design decision, not a marketing decision. 10M+ daily actives, zero paid UA.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="pro-tips">
+      <div class="pro-tip"><div class="pt-num">01</div><div><strong>D1 retention is the single most important metric in mobile gaming.</strong> Every 10 percentage point improvement in D1 compounds across every install you ever acquire. If D1 = 30% vs 40%, you've permanently written off 25% of your entire future LTV at scale. Fix D1 before scaling UA.</div></div>
+      <div class="pro-tip"><div class="pt-num">02</div><div><strong>Seed 20 micro-streamers before seeding 1 macro-streamer.</strong> A micro-streamer (20K followers) who loves your game will post 10 videos per month for 3 months. A mega-streamer (5M followers) will post once. The micro volume wins.</div></div>
+      <div class="pro-tip"><div class="pt-num">03</div><div><strong>The Live Ops calendar is a growth strategy, not a content schedule.</strong> Plan events around real-world cultural moments (holidays, sports finals, viral trends). Clash of Clans saw 40% DAU spikes during seasonal events. The event is a re-acquisition mechanism for lapsed players.</div></div>
+      <div class="pro-tip"><div class="pt-num">04</div><div><strong>Design one "clip moment" per session.</strong> Ask: "What would a player want to post to TikTok / Twitch today?" If the answer is "nothing," your session loop needs work. Spectacular failure moments, rare drops, and surprise reveals are all clip-worthy by design.</div></div>
+      <div class="pro-tip"><div class="pt-num">05</div><div><strong>Battle Pass economics beat IAP economics.</strong> A $10 Battle Pass generates more revenue than a $10 IAP purchase because it creates a 30-60 day engagement commitment alongside the revenue. Players who buy the Battle Pass play 2–3x more. More play = more social sharing = more organic UA.</div></div>
+      <div class="pro-tip"><div class="pt-num">06</div><div><strong>The best community managers are former players, not PR people.</strong> Hire from the community. Community members who become staff have authentic credibility that no PR hire can replicate. They know what the players care about before they have to ask.</div></div>
+    </div>
+
+    <div class="case-card">
+      <div class="cs-badge">Deep Case Study</div>
+      <div class="cs-title">Among Us: Accidental Viral + Intentional Retention</div>
+      <p>Among Us was released in 2018 by a 3-person studio called InnerSloth. It got 30–50 daily players for 2 years. In August 2020, two Twitch streamers — Sodapoppin and xQc — started playing it to fill dead time during a stream. Within 48 hours, it had 500,000 concurrent players. The studio had not changed the game. The product was the same. What changed was a single distribution event. InnerSloth's response is the masterclass. <strong>No monetization panic:</strong> They did not rush to add pay-to-win mechanics or flood the game with ads to capitalize on the spike. They invested in servers to handle the load first. <strong>Cosmetics monetization:</strong> They released cosmetic DLC packs at $3–$5 each. No impact on gameplay fairness. Players bought because they loved the community, not because they needed an advantage. <strong>Community feedback loop:</strong> They added colorblind mode, reported bugs the community flagged, and communicated transparently about their small team's capacity. The honesty built loyalty. <strong>The result:</strong> Among Us reached 100M+ downloads and 60M daily active users at peak. The total paid marketing budget during the viral period: $0.</p>
+      <div class="cs-lesson"><b>Master move:</b> When a viral spike hits, serve the existing community first — don't exploit them. InnerSloth's restraint preserved community trust, which converted a viral spike into a sustained player base.</div>
+    </div>
+  </div>
+
+  <div class="session-cta"><a class="cta-btn" href="https://growth.megahit.ai" target="_blank" rel="noopener">Try MegaHit for Free ↗</a></div>
+
+  <div class="part-head" id="appendix">
+    <span class="part-tag">Reference</span>
+    <h2>Master Tools Appendix</h2>
+    <p class="desc">The canonical tool stack across all 21 growth domains. Organized by function so you can build or audit a complete growth stack.</p>
+  </div>
+  <div class="subsec" style="padding-bottom:44px">
+    <div class="table-wrap"><table>
+      <thead><tr><th>Domain</th><th>Category</th><th>Primary Tools</th><th>AI / Agent Layer</th></tr></thead>
+      <tbody>
+        <tr><td>PMF Measurement</td><td>Survey + Analytics</td><td>Typeform, Delighted, Google Forms</td><td>Claude for synthesis, ChatGPT for sentiment</td></tr>
+        <tr class="hilite"><td>Positioning</td><td>Research</td><td>Wynter (message testing), Wynter B2B panel, SparkToro</td><td>Perplexity for competitive landscape, Claude for framework application</td></tr>
+        <tr><td>Metrics &amp; Analytics</td><td>Product Analytics</td><td>Mixpanel, Amplitude, PostHog (open source), Heap</td><td>Mixpanel AI, Amplitude AI insights</td></tr>
+        <tr class="hilite"><td>Founder Brand</td><td>Social + Scheduling</td><td>Buffer, Hypefury, Taplio (LinkedIn), Tweet Hunter</td><td>Claude for drafts, Taplio AI for LinkedIn optimization</td></tr>
+        <tr><td>PR / Storytelling</td><td>Media outreach</td><td>Muckrack, Cision, Featured.com, HARO</td><td>Claude for pitch drafts</td></tr>
+        <tr class="hilite"><td>SEO</td><td>Research + Content</td><td>Ahrefs, Semrush, Clearscope, SurferSEO</td><td>Surfer AI, MarketMuse, Clearscope AI</td></tr>
+        <tr><td>GEO (AI Search)</td><td>LLM Optimization</td><td>Profound, Goodie AI, Otterly.ai</td><td>Claude for schema markup generation</td></tr>
+        <tr class="hilite"><td>TikTok / Social Search</td><td>Content creation</td><td>CapCut, Descript, Opus Clip</td><td>Opus Clip AI (auto-clips), ElevenLabs (voiceover)</td></tr>
+        <tr><td>KOL / Influencer</td><td>Discovery + Mgmt</td><td>Creator.co, Grin, Aspire, Modash</td><td>Modash AI for vetting, Claude for brief writing</td></tr>
+        <tr class="hilite"><td>Paid Acquisition</td><td>Ad Platforms</td><td>Meta Ads, Google UAC, Apple Search Ads, TikTok Ads</td><td>Madgicx, Motion (creative analytics), Pencil (AI creative)</td></tr>
+        <tr><td>Attribution</td><td>MTA / MMM</td><td>Triple Whale, Northbeam, Rockerbox</td><td>Triple Whale Moby (AI attribution)</td></tr>
+        <tr class="hilite"><td>CRO</td><td>Experimentation</td><td>VWO, Optimizely, AB Tasty, Google Optimize</td><td>Intellimize (AI personalization)</td></tr>
+        <tr><td>Email / CRM</td><td>Marketing Automation</td><td>Klaviyo (e-com), Customer.io (SaaS), HubSpot, Braze</td><td>Klaviyo AI, Braze AI, Jasper for copy</td></tr>
+        <tr class="hilite"><td>Retention / Onboarding</td><td>In-app &amp; engagement</td><td>Appcues, Intercom, Chameleon, Userpilot</td><td>Intercom AI (Fin), Gainsight Einstein</td></tr>
+        <tr><td>Mobile / ASO</td><td>App Store Optimization</td><td>Sensor Tower, AppTweak, MobileAction, StoreMaven</td><td>Sensor Tower AI, AppTweak AI</td></tr>
+        <tr class="hilite"><td>Mobile Monetization</td><td>Subscription Management</td><td>RevenueCat, Adapty, Apphud</td><td>RevenueCat Paywalls AI</td></tr>
+        <tr><td>B2B Outbound</td><td>Sales Prospecting</td><td>Apollo.io, Clay, ZoomInfo, Lusha, Instantly</td><td>Clay AI enrichment, 11x AI SDR, Artisan</td></tr>
+        <tr class="hilite"><td>CRM / Sales</td><td>Pipeline Management</td><td>Salesforce, HubSpot, Attio, Folk</td><td>Salesforce Einstein, HubSpot AI, Gong AI</td></tr>
+        <tr><td>Community</td><td>Community Platforms</td><td>Discord, Circle, Slack, Discourse, Lu.ma</td><td>Common Room (AI member insights), Orbit</td></tr>
+        <tr class="hilite"><td>Partnerships</td><td>Partner Management</td><td>PartnerStack, Impact, Crossbeam, Reveal</td><td>Crossbeam AI (account overlap)</td></tr>
+        <tr><td>Fundraising</td><td>Investor Relations</td><td>Affinity CRM, Docsend, Carta, Crunchbase, PitchBook</td><td>Affinity AI, Docsend AI (engagement tracking)</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="heatmap">
+      <div class="hm-grid">
+        <div style="grid-row:1;grid-column:1;"></div>
+        <div class="hm-head" style="grid-row:1;grid-column:2;">SaaS</div>
+        <div class="hm-head" style="grid-row:1;grid-column:3;">B2B Ent</div>
+        <div class="hm-head" style="grid-row:1;grid-column:4;">B2C</div>
+        <div class="hm-head" style="grid-row:1;grid-column:5;">E-Comm</div>
+        <div class="hm-head" style="grid-row:1;grid-column:6;">Pro Svc</div>
+        <div class="hm-head" style="grid-row:1;grid-column:7;">Gaming</div>
+
+        <div class="hm-label" style="grid-row:2;grid-column:1;">Product Analytics</div>
+        <div class="cell" style="grid-row:2;grid-column:2;opacity:1;"></div>
+        <div class="cell" style="grid-row:2;grid-column:3;opacity:.55;"></div>
+        <div class="cell" style="grid-row:2;grid-column:4;opacity:1;"></div>
+        <div class="cell" style="grid-row:2;grid-column:5;opacity:.55;"></div>
+        <div class="cell" style="grid-row:2;grid-column:6;opacity:.3;"></div>
+        <div class="cell" style="grid-row:2;grid-column:7;opacity:1;"></div>
+
+        <div class="hm-label" style="grid-row:3;grid-column:1;">Email / CRM Automation</div>
+        <div class="cell" style="grid-row:3;grid-column:2;opacity:.55;"></div>
+        <div class="cell" style="grid-row:3;grid-column:3;opacity:.3;"></div>
+        <div class="cell" style="grid-row:3;grid-column:4;opacity:.55;"></div>
+        <div class="cell" style="grid-row:3;grid-column:5;opacity:1;"></div>
+        <div class="cell" style="grid-row:3;grid-column:6;opacity:.3;"></div>
+        <div class="cell" style="grid-row:3;grid-column:7;opacity:.3;"></div>
+
+        <div class="hm-label" style="grid-row:4;grid-column:1;">Paid Acquisition</div>
+        <div class="cell" style="grid-row:4;grid-column:2;opacity:.3;"></div>
+        <div class="cell" style="grid-row:4;grid-column:3;opacity:.3;"></div>
+        <div class="cell" style="grid-row:4;grid-column:4;opacity:1;"></div>
+        <div class="cell" style="grid-row:4;grid-column:5;opacity:1;"></div>
+        <div class="cell" style="grid-row:4;grid-column:6;opacity:.3;"></div>
+        <div class="cell" style="grid-row:4;grid-column:7;opacity:1;"></div>
+
+        <div class="hm-label" style="grid-row:5;grid-column:1;">Attribution &amp; MTA</div>
+        <div class="cell" style="grid-row:5;grid-column:2;opacity:.3;"></div>
+        <div class="cell" style="grid-row:5;grid-column:3;opacity:.3;"></div>
+        <div class="cell" style="grid-row:5;grid-column:4;opacity:.55;"></div>
+        <div class="cell" style="grid-row:5;grid-column:5;opacity:1;"></div>
+        <div class="cell" style="grid-row:5;grid-column:6;opacity:.08;"></div>
+        <div class="cell" style="grid-row:5;grid-column:7;opacity:.55;"></div>
+
+        <div class="hm-label" style="grid-row:6;grid-column:1;">Community Platforms</div>
+        <div class="cell" style="grid-row:6;grid-column:2;opacity:.55;"></div>
+        <div class="cell" style="grid-row:6;grid-column:3;opacity:.3;"></div>
+        <div class="cell" style="grid-row:6;grid-column:4;opacity:.55;"></div>
+        <div class="cell" style="grid-row:6;grid-column:5;opacity:.3;"></div>
+        <div class="cell" style="grid-row:6;grid-column:6;opacity:.3;"></div>
+        <div class="cell" style="grid-row:6;grid-column:7;opacity:1;"></div>
+
+        <div class="hm-label" style="grid-row:7;grid-column:1;">Creator / UGC / KOL</div>
+        <div class="cell" style="grid-row:7;grid-column:2;opacity:.3;"></div>
+        <div class="cell" style="grid-row:7;grid-column:3;opacity:.08;"></div>
+        <div class="cell" style="grid-row:7;grid-column:4;opacity:1;"></div>
+        <div class="cell" style="grid-row:7;grid-column:5;opacity:1;"></div>
+        <div class="cell" style="grid-row:7;grid-column:6;opacity:.3;"></div>
+        <div class="cell" style="grid-row:7;grid-column:7;opacity:.55;"></div>
+
+        <div class="hm-label" style="grid-row:8;grid-column:1;">Sales / CRM Pipeline</div>
+        <div class="cell" style="grid-row:8;grid-column:2;opacity:.55;"></div>
+        <div class="cell" style="grid-row:8;grid-column:3;opacity:1;"></div>
+        <div class="cell" style="grid-row:8;grid-column:4;opacity:.08;"></div>
+        <div class="cell" style="grid-row:8;grid-column:5;opacity:.08;"></div>
+        <div class="cell" style="grid-row:8;grid-column:6;opacity:1;"></div>
+        <div class="cell" style="grid-row:8;grid-column:7;opacity:.08;"></div>
+      </div>
+      <div class="hm-legend">
+        <span><i style="opacity:.08"></i> minimal</span>
+        <span><i style="opacity:.3"></i> low</span>
+        <span><i style="opacity:.55"></i> medium</span>
+        <span><i style="opacity:1"></i> core to stack</span>
+      </div>
+    </div>
+    <div class="chart-cap">Illustrative tool-category centrality by client type — for calibrating which stack layers to prioritize when scoping a new engagement.</div>
+  </div>
+
+  <footer class="brand">
+    <div class="logo" style="justify-content:center;">
+      <img src="data:image/webp;base64,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" alt="Megahit" height="40" style="display:block;margin:0 auto;">
+    </div>
+    <h2>Your Growth Co-Founder</h2>
+    <div class="l1">Built by 20+ growth experts who've helped 100+ companies grow.</div>
+    <a class="cta-btn" href="https://megahit.ai">Try MegaHit.AI ↗</a>
+    <div class="l2">Claim your 1000 credits now — megahit.ai</div>
+  </footer>
+
+</div>
+</body>
+</html>
