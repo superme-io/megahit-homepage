@@ -69,9 +69,10 @@ Megahit`;
               <td>
                 <p style="margin:0 0 20px">Hi ${escapeHtml(firstName)},</p>
 
-                <p style="margin:0 0 20px">
-                  Here it is:
-                  <a href="${playbookUrl}" style="color:#264ef7;font-weight:600;text-decoration:none">Growth Playbook 101 &rarr;</a>
+                <p style="margin:0 0 16px">Here it is:</p>
+
+                <p style="margin:0 0 22px">
+                  <a href="${playbookUrl}" style="display:inline-block;background:#264ef7;color:#ffffff;font-weight:600;text-decoration:none;padding:12px 22px;border-radius:10px">Growth Playbook 101 &rarr;</a>
                 </p>
 
                 <p style="margin:0 0 20px">Bookmark it. It&rsquo;s the same playbook we run inside Megahit every day.</p>
@@ -90,7 +91,7 @@ Megahit`;
                 <p style="margin:0 0 24px">One founder, one system, no agency retainer.</p>
 
                 <p style="margin:0 0 24px">
-                  <a href="${appUrl}" style="display:inline-block;background:#264ef7;color:#ffffff;font-weight:600;text-decoration:none;padding:12px 22px;border-radius:10px">See what it builds for your company &rarr;</a>
+                  <a href="${appUrl}" style="color:#264ef7;font-weight:600;text-decoration:none">See what it builds for your company &rarr;</a>
                 </p>
 
                 <p style="margin:0 0 28px">
